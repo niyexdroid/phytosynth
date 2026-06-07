@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="font-sans text-charcoal bg-white antialiased">
+      <body className="font-sans text-charcoal bg-white antialiased" suppressHydrationWarning>
         {children}
       </body>
     </html>

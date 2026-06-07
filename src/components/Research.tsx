@@ -1,8 +1,11 @@
+import Image from "next/image";
+import researchBg from "@/assets/driving-research.png";
+
 const STATS = [
-  { value: '20+', label: 'Research Projects', icon: '📄' },
-  { value: '15+', label: 'Collaborating Institutions', icon: '👥' },
-  { value: '5+', label: 'Countries', icon: '🌍' },
-  { value: '100%', label: 'Commitment to Sustainability', icon: '🛡️' },
+  { value: "20+", label: "Research Projects" },
+  { value: "15+", label: "Collaborating Institutions" },
+  { value: "5+", label: "Countries" },
+  { value: "100%", label: "Commitment to Sustainability" },
 ];
 
 const statIcons = [
@@ -14,17 +17,32 @@ const statIcons = [
 
 export default function Research() {
   return (
-    <section id="research" className="relative py-24 md:py-28 bg-[#0D0D0D] overflow-hidden">
-      {/* Background layers */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(45,106,79,0.18),transparent_60%),radial-gradient(ellipse_at_70%_50%,rgba(82,183,136,0.08),transparent_50%)]" />
-        <div className="absolute inset-0 opacity-[0.015]"
+    <section id="research" className="relative py-24 md:py-28 overflow-hidden">
+      {/* Background image */}
+      <Image
+        src={researchBg}
+        alt=""
+        fill
+        className="object-cover object-center"
+        sizes="100vw"
+      />
+
+      {/* Dark overlay — makes text readable */}
+      <div className="absolute inset-0 bg-[#0D0D0D]/80 z-[1]" />
+
+      {/* Radial gradient accents */}
+      <div className="absolute inset-0 z-[2] pointer-events-none">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(45,106,79,0.22),transparent_60%),radial-gradient(ellipse_at_70%_50%,rgba(82,183,136,0.12),transparent_50%)]" />
+        <div
+          className="absolute inset-0 opacity-[0.02]"
           style={{
-            backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 2px, white 2px, white 4px), repeating-linear-gradient(90deg, transparent, transparent 2px, white 2px, white 4px)',
+            backgroundImage:
+              "repeating-linear-gradient(0deg, transparent, transparent 2px, white 2px, white 4px), repeating-linear-gradient(90deg, transparent, transparent 2px, white 2px, white 4px)",
           }}
         />
       </div>
 
+      {/* Content */}
       <div className="relative z-10 max-w-8xl mx-auto px-6 md:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Left */}
         <div className="reveal opacity-0">

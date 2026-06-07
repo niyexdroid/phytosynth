@@ -1,83 +1,51 @@
+import Image from "next/image";
+import Link from "next/link";
+
+const SLUGS: Record<string, string> = {
+  "Agri-Tech": "/services/agric-tech",
+  "AI in Agriculture": "/services/ai-in-agriculture",
+  "Plant Biotechnology": "/services/plant-biotechnology",
+  "Environmental Biosolutions": "/services/environmental-biosolutions",
+  "Molecular Diagnostics": "/services/molecular-diagnostics",
+  Consultancy: "/services/consultancy",
+  "Commercial R&D": "/services/commercial-r-and-d",
+};
+
 const SERVICES = [
   {
     title: 'Agri-Tech',
     desc: 'Smart farming solutions and precision agriculture technologies.',
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2L2 22h20L12 2z"/>
-        <line x1="12" y1="10" x2="12" y2="22"/>
-        <line x1="7" y1="22" x2="17" y2="22"/>
-      </svg>
-    ),
+    icon: <Image src="/ser-1.png" alt="Agri-Tech" width={80} height={80} className="w-full h-full object-contain mix-blend-multiply" />,
   },
   {
     title: 'AI in Agriculture',
     desc: 'AI-powered analytics for crop monitoring, prediction and decision support.',
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="2" y="2" width="20" height="8" rx="2"/>
-        <rect x="2" y="14" width="20" height="8" rx="2"/>
-        <line x1="6" y1="6" x2="6.01" y2="6"/>
-        <line x1="6" y1="18" x2="6.01" y2="18"/>
-      </svg>
-    ),
+    icon: <Image src="/ser-2.png" alt="AI in Agriculture" width={80} height={80} className="w-full h-full object-contain mix-blend-multiply" />,
   },
   {
     title: 'Plant Biotechnology',
     desc: 'Advanced research in genetics, molecular biology and crop improvement.',
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22V8"/>
-        <path d="M8 12c0-4 4-6 4-6s4 2 4 6"/>
-        <path d="M16 8c0 2-2 4-4 4S8 10 8 8"/>
-        <circle cx="12" cy="4" r="2"/>
-      </svg>
-    ),
+    icon: <Image src="/ser-3.png" alt="Plant Biotechnology" width={80} height={80} className="w-full h-full object-contain mix-blend-multiply" />,
   },
   {
     title: 'Environmental Biosolutions',
     desc: 'Nature-based solutions for soil health, pollution management and sustainability.',
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10"/>
-        <path d="M2 12h20"/>
-        <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10"/>
-        <path d="M12 2a15.3 15.3 0 00-4 10 15.3 15.3 0 004 10"/>
-      </svg>
-    ),
+    icon: <Image src="/ser-4.png" alt="Environmental Biosolutions" width={80} height={80} className="w-full h-full object-contain mix-blend-multiply" />,
   },
   {
     title: 'Molecular Diagnostics',
     desc: 'Rapid and accurate molecular testing for plants, pathogens and environments.',
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
-      </svg>
-    ),
+    icon: <Image src="/ser-5.png" alt="Molecular Diagnostics" width={80} height={80} className="w-full h-full object-contain mix-blend-multiply" />,
   },
   {
     title: 'Consultancy',
     desc: 'Expert advice and strategic support in biotechnology and biosciences.',
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
-        <circle cx="9" cy="7" r="4"/>
-        <path d="M23 21v-2a4 4 0 00-3-3.87"/>
-        <path d="M16 3.13a4 4 0 010 7.75"/>
-      </svg>
-    ),
+    icon: <Image src="/ser-6.png" alt="Consultancy" width={80} height={80} className="w-full h-full object-contain mix-blend-multiply" />,
   },
   {
     title: 'Commercial R&D',
     desc: 'Contract research and product development solutions for industry partners.',
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M9.5 2A2.5 2.5 0 0112 4.5v15a2.5 2.5 0 01-5 0v-15A2.5 2.5 0 019.5 2z"/>
-        <path d="M14.5 7A2.5 2.5 0 0117 9.5v10a2.5 2.5 0 01-5 0v-10A2.5 2.5 0 0114.5 7z"/>
-        <path d="M4.5 12A2.5 2.5 0 017 14.5v5a2.5 2.5 0 01-5 0v-5A2.5 2.5 0 014.5 12z"/>
-        <path d="M19.5 4A2.5 2.5 0 0122 6.5v13a2.5 2.5 0 01-5 0v-13A2.5 2.5 0 0119.5 4z"/>
-      </svg>
-    ),
+    icon: <Image src="/ser-7.png" alt="Commercial R&D" width={80} height={80} className="w-full h-full object-contain mix-blend-multiply" />,
   },
 ];
 
@@ -102,11 +70,12 @@ export default function Services() {
         {/* Cards grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-7 gap-4 md:gap-5">
           {SERVICES.map((svc, i) => (
-            <div
+            <Link
               key={svc.title}
-              className={`reveal opacity-0 bg-[#F5F7F5] border border-gray-200 rounded-xl p-5 md:p-6 text-center flex flex-col items-center hover:-translate-y-1.5 hover:shadow-xl hover:border-phyto-light hover:bg-white transition-all duration-300 fade-in-${i + 1}`}
+              href={SLUGS[svc.title]}
+              className={`reveal opacity-0 bg-[#F5F7F5] border border-gray-200 rounded-xl p-5 md:p-6 text-center flex flex-col items-center hover:-translate-y-1.5 hover:shadow-xl hover:border-phyto-light hover:bg-white transition-all duration-300 fade-in-${i + 1} block`}
             >
-              <div className="w-[52px] h-[52px] mb-4 flex items-center justify-center bg-phyto-pale rounded-md text-phyto-forest group-hover:bg-phyto-forest group-hover:text-white transition-colors">
+              <div className="w-[80px] h-[80px] mb-4 flex items-center justify-center text-phyto-forest">
                 {svc.icon}
               </div>
               <h3 className="text-[15px] font-bold text-[#0D0D0D] mb-2 leading-tight">
@@ -115,7 +84,7 @@ export default function Services() {
               <p className="text-[13px] text-[#6B7570] leading-relaxed">
                 {svc.desc}
               </p>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

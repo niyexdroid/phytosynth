@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import heroBg from '../../hero-bg.png';
+import heroBg from '@/assets/hero-bg.png';
 
 export default function Hero() {
   return (

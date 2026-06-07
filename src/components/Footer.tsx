@@ -1,30 +1,31 @@
+import Link from "next/link";
+
 const QUICK_LINKS = [
-  { label: 'Home', href: '#home' },
-  { label: 'About Us', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Research', href: '#research' },
-  { label: 'Training', href: '#training' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Insights', href: '#insights' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '/' },
+  { label: 'About Us', href: '/#about' },
+  { label: 'Services', href: '/services' },
+  { label: 'Research', href: '/#research' },
+  { label: 'Training', href: '/#training' },
+  { label: 'Insights', href: '/#insights' },
+  { label: 'Contact', href: '/#contact' },
 ];
 
 const SERVICE_LINKS = [
-  { label: 'Agri-Tech', href: '#services' },
-  { label: 'AI in Agriculture', href: '#services' },
-  { label: 'Plant Biotechnology', href: '#services' },
-  { label: 'Environmental Biosolutions', href: '#services' },
-  { label: 'Molecular Diagnostics', href: '#services' },
-  { label: 'Consultancy', href: '#services' },
-  { label: 'Commercial R&D', href: '#services' },
+  { label: 'Agric-Tech', href: '/services/agric-tech' },
+  { label: 'AI in Agriculture', href: '/services/ai-in-agriculture' },
+  { label: 'Plant Biotechnology', href: '/services/plant-biotechnology' },
+  { label: 'Environmental Biosolutions', href: '/services/environmental-biosolutions' },
+  { label: 'Molecular Diagnostics', href: '/services/molecular-diagnostics' },
+  { label: 'Consultancy', href: '/services/consultancy' },
+  { label: 'Commercial R&D', href: '/services/commercial-r-and-d' },
 ];
 
 const TRAINING_LINKS = [
-  { label: 'HPLC Training', href: '#training' },
-  { label: 'GC-MS Training', href: '#training' },
-  { label: 'Phytochemical Analysis', href: '#training' },
-  { label: 'Molecular Techniques', href: '#training' },
-  { label: 'Customized Training', href: '#training' },
+  { label: 'HPLC Training', href: '/#training' },
+  { label: 'GC-MS Training', href: '/#training' },
+  { label: 'Phytochemical Analysis', href: '/#training' },
+  { label: 'Molecular Techniques', href: '/#training' },
+  { label: 'Customized Training', href: '/#training' },
 ];
 
 const CONTACT_INFO = [
@@ -35,7 +36,7 @@ const CONTACT_INFO = [
         <circle cx="12" cy="10" r="3"/>
       </svg>
     ),
-    text: 'Phytosynth Bioscience Ltd\nInnovation Hub, London,\nUnited Kingdom',
+    text: 'Innovation Hub, London,\nUnited Kingdom',
   },
   {
     icon: (
@@ -44,7 +45,7 @@ const CONTACT_INFO = [
         <path d="M22 4L12 13 2 4"/>
       </svg>
     ),
-    text: 'info@phytosynthbio.com',
+    text: 'info@phytosynth.co.uk',
   },
   {
     icon: (
@@ -52,7 +53,7 @@ const CONTACT_INFO = [
         <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
       </svg>
     ),
-    text: '+44 (0) 20 XXXX XXXX',
+    text: '+447879460859',
   },
 ];
 
@@ -60,11 +61,11 @@ export default function Footer() {
   return (
     <footer className="bg-charcoal">
       <div className="max-w-8xl mx-auto px-6 md:px-8 pt-16 pb-0">
-        {/* 4-column grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1.3fr] gap-10 lg:gap-12 pb-12 border-b border-white/8">
+        {/* 5-column grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-[1.4fr_1fr_1.1fr_1fr_1.2fr] gap-10 lg:gap-8 xl:gap-10 pb-12 border-b border-white/8">
           {/* Brand */}
-          <div className="reveal opacity-0">
-            <div className="flex items-center gap-2.5 mb-4">
+          <div className="reveal opacity-0 col-span-2 md:col-span-3 lg:col-span-1">
+            <Link href="/" className="flex items-center gap-2.5 mb-4">
               <svg width="34" height="34" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path d="M24 6C24 6 8 10 8 26C8 34 14 42 24 44C34 42 40 34 40 26C40 10 24 6 24 6Z" fill="#2D6A4F" opacity="0.9"/>
                 <path d="M24 10C24 6 28 4 28 4C28 4 30 10 28 16C26 22 20 24 20 24" fill="#52B788" opacity="0.7"/>
@@ -78,7 +79,7 @@ export default function Footer() {
                 PHYTOSYNTH<br />
                 <span className="text-[11px] font-semibold tracking-[0.16em] text-phyto-bright">BIOSCIENCE LTD</span>
               </span>
-            </div>
+            </Link>
             <p className="text-sm text-[#9DA5A2] leading-relaxed mb-5">
               Phytosynth Bioscience Ltd is a leading agritech and biotechnology company delivering
               science-driven solutions for sustainable agriculture and environmental resilience
@@ -92,7 +93,7 @@ export default function Footer() {
               <a href="#" aria-label="X (Twitter)" className="w-[38px] h-[38px] rounded-full bg-white/6 flex items-center justify-center hover:bg-phyto-vibrant transition-colors group">
                 <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" className="text-[#9DA5A2] group-hover:text-white transition-colors"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
               </a>
-              <a href="mailto:info@phytosynthbio.com" aria-label="Email" className="w-[38px] h-[38px] rounded-full bg-white/6 flex items-center justify-center hover:bg-phyto-vibrant transition-colors group">
+              <a href="mailto:info@phytosynth.co.uk" aria-label="Email" className="w-[38px] h-[38px] rounded-full bg-white/6 flex items-center justify-center hover:bg-phyto-vibrant transition-colors group">
                 <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#9DA5A2] group-hover:text-white transition-colors"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
               </a>
             </div>
@@ -102,13 +103,13 @@ export default function Footer() {
           <div className="reveal opacity-0">
             <h4 className="text-[15px] font-bold text-white mb-5 tracking-[0.02em]">Quick Links</h4>
             {QUICK_LINKS.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className="block text-sm text-[#9DA5A2] py-1.5 hover:text-phyto-bright transition-colors"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -116,29 +117,33 @@ export default function Footer() {
           <div className="reveal opacity-0">
             <h4 className="text-[15px] font-bold text-white mb-5 tracking-[0.02em]">Our Services</h4>
             {SERVICE_LINKS.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 className="block text-sm text-[#9DA5A2] py-1.5 hover:text-phyto-bright transition-colors"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
 
-          {/* Training & Contact */}
+          {/* Training */}
           <div className="reveal opacity-0">
-            <h4 className="text-[15px] font-bold text-white mb-5 tracking-[0.02em]">Training Programs</h4>
+            <h4 className="text-[15px] font-bold text-white mb-5 tracking-[0.02em]">Training</h4>
             {TRAINING_LINKS.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 className="block text-sm text-[#9DA5A2] py-1.5 hover:text-phyto-bright transition-colors"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
-            <h4 className="text-[15px] font-bold text-white mt-7 mb-4 tracking-[0.02em]">Contact Us</h4>
+          </div>
+
+          {/* Contact Us — own column */}
+          <div className="reveal opacity-0">
+            <h4 className="text-[15px] font-bold text-white mb-5 tracking-[0.02em]">Contact Us</h4>
             {CONTACT_INFO.map((item, i) => (
               <div key={i} className="flex items-start gap-2.5 mb-3.5">
                 <span className="text-phyto-bright mt-0.5 shrink-0">{item.icon}</span>
