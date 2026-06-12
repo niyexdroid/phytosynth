@@ -100,42 +100,42 @@ const SERVICES_INCLUDE = [
   {
     icon: IconCompass,
     title: "Strategic Advisory",
-    desc: "Board-level and C-suite advisory services on bioscience strategy — technology roadmapping, R&D portfolio optimisation, market entry planning, and competitive positioning grounded in deep domain expertise and global market insight.",
+    desc: "Board-level and C-suite advisory services on bioscience strategy, technology roadmapping, R&D portfolio optimisation, market entry planning, and competitive positioning grounded in deep domain expertise and global market insight.",
   },
   {
     icon: IconTrending,
     title: "Market Intelligence & Due Diligence",
-    desc: "Comprehensive market assessments, technology landscaping, competitor analysis, and technical due diligence for investors, acquirers, and corporate development teams evaluating bioscience opportunities — from seed-stage to maturity.",
+    desc: "Comprehensive market assessments, technology landscaping, competitor analysis, and technical due diligence for investors, acquirers, and corporate development teams evaluating bioscience opportunities, from seed-stage to maturity.",
   },
   {
     icon: IconDollar,
     title: "Grant & Funding Strategy",
-    desc: "Identification of public and private funding opportunities — including government R&D grants, multilateral development funds, and impact investment — with full proposal development, budget construction, and consortium coordination.",
+    desc: "Identification of public and private funding opportunities, including government R&D grants, multilateral development funds, and impact investment, with full proposal development, budget construction, and consortium coordination.",
   },
   {
     icon: IconShield,
     title: "Regulatory Strategy",
-    desc: "Navigation of the complex regulatory landscape for biotechnology products — GM crop approvals, biopesticide registration, diagnostic device certification — across African, European, and North American jurisdictions.",
+    desc: "Navigation of the complex regulatory landscape for biotechnology products, GM crop approvals, biopesticide registration, diagnostic device certification, across African, European, and North American jurisdictions.",
   },
   {
     icon: IconGlobe,
     title: "International Expansion Support",
-    desc: "Go-to-market strategy for bioscience companies entering new geographies — partner identification, regulatory pathway mapping, field trial site selection, and local team recruitment strategy tailored to each target market.",
+    desc: "Go-to-market strategy for bioscience companies entering new geographies, partner identification, regulatory pathway mapping, field trial site selection, and local team recruitment strategy tailored to each target market.",
   },
   {
     icon: IconBook,
     title: "IP Strategy & Technology Transfer",
-    desc: "Intellectual property landscape mapping, freedom-to-operate analysis, patentability assessment, and technology transfer programme design — ensuring your innovations are protected and your partnerships are structured for success.",
+    desc: "Intellectual property landscape mapping, freedom-to-operate analysis, patentability assessment, and technology transfer programme design, ensuring your innovations are protected and your partnerships are structured for success.",
   },
   {
     icon: IconBriefcase,
     title: "Organisational Development",
-    desc: "Building bioscience R&D organisations from the ground up — laboratory design, equipment specification, quality management system implementation, talent acquisition strategy, and operational SOP development.",
+    desc: "Building bioscience R&D organisations from the ground up, laboratory design, equipment specification, quality management system implementation, talent acquisition strategy, and operational SOP development.",
   },
   {
     icon: IconUsersGroup,
     title: "Stakeholder Engagement",
-    desc: "Design and facilitation of multi-stakeholder processes — bringing together industry, government, academia, and civil society to build consensus on complex bioscience issues, from gene editing policy to biosecurity frameworks.",
+    desc: "Design and facilitation of multi-stakeholder processes, bringing together industry, government, academia, and civil society to build consensus on complex bioscience issues, from gene editing policy to biosecurity frameworks.",
   },
 ];
 
@@ -143,7 +143,7 @@ const AUDIENCES = [
   {
     icon: IconBriefcase,
     label: "Startups & Scale-ups",
-    desc: "Bioscience ventures at all stages — from pre-seed to Series C — needing strategic guidance, investor readiness support, and operational expertise to navigate hyper-growth phases.",
+    desc: "Bioscience ventures at all stages, from pre-seed to Series C, needing strategic guidance, investor readiness support, and operational expertise to navigate hyper-growth phases.",
   },
   {
     icon: IconGlobe,
@@ -176,22 +176,22 @@ const DELIVERABLES = [
   {
     icon: IconCompass,
     label: "Strategic Roadmaps",
-    desc: "Detailed, phased strategy documents covering technology, market, and organisational dimensions — with clear milestones, resource requirements, risk registers, and KPIs for each phase of execution.",
+    desc: "Detailed, phased strategy documents covering technology, market, and organisational dimensions, with clear milestones, resource requirements, risk registers, and KPIs for each phase of execution.",
   },
   {
     icon: IconTrending,
     label: "Market & Technology Reports",
-    desc: "In-depth analyses of market dynamics, technology trends, competitive landscapes, and opportunity spaces — synthesised into actionable recommendations backed by primary and secondary research.",
+    desc: "In-depth analyses of market dynamics, technology trends, competitive landscapes, and opportunity spaces, synthesised into actionable recommendations backed by primary and secondary research.",
   },
   {
     icon: IconDollar,
     label: "Funding Proposals",
-    desc: "Complete grant applications and investment memoranda — with compelling technical narratives, robust budgets, logical frameworks, and supporting documentation ready for submission.",
+    desc: "Complete grant applications and investment memoranda, with compelling technical narratives, robust budgets, logical frameworks, and supporting documentation ready for submission.",
   },
   {
     icon: IconShield,
     label: "Regulatory Dossiers",
-    desc: "Compiled, reviewed, and formatted regulatory submissions — including data packages, risk assessments, and correspondence histories — prepared to the specific requirements of each target jurisdiction.",
+    desc: "Compiled, reviewed, and formatted regulatory submissions, including data packages, risk assessments, and correspondence histories, prepared to the specific requirements of each target jurisdiction.",
   },
   {
     icon: IconBook,
@@ -231,7 +231,7 @@ export default function ConsultancyPage() {
         {/* ═══════════════════════ BANNER ═══════════════════════ */}
         <section className="relative pt-[76px] h-[420px] md:h-[480px] flex items-center overflow-hidden">
           <Image
-            src="/hero-bg.png"
+            src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&q=80&fit=crop"
             alt="Bioscience consultancy and strategic advisory"
             fill
             className="object-cover object-center"
@@ -246,6 +246,15 @@ export default function ConsultancyPage() {
                 "repeating-linear-gradient(0deg, transparent, transparent 2px, white 2px, white 4px), repeating-linear-gradient(90deg, transparent, transparent 2px, white 2px, white 4px)",
             }}
           />
+          <Link
+            href="/services"
+            className="absolute top-[90px] left-5 md:left-8 z-10 inline-flex items-center gap-1.5 text-white/85 hover:text-white text-[13px] font-semibold transition-colors"
+          >
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Back to All Services
+          </Link>
           <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-8 text-center">
             <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-4">
               Services
@@ -254,7 +263,7 @@ export default function ConsultancyPage() {
               Consultancy
             </h1>
             <p className="text-[17px] text-[#B8D8C8] max-w-[680px] mx-auto leading-relaxed">
-              Expert strategic and technical advisory services spanning the full bioscience value chain —
+              Expert strategic and technical advisory services spanning the full bioscience value chain,
               from startup formation and funding strategy to regulatory navigation and international expansion.
             </p>
           </div>
@@ -264,20 +273,20 @@ export default function ConsultancyPage() {
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-5xl mx-auto px-6 md:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             <div className="reveal opacity-0">
-              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-vibrant mb-3">
+              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-3">
                 Overview
               </span>
               <h2 className="text-[clamp(24px,3.5vw,36px)] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0D0D0D] mb-5">
-                Science is only half the equation
+                Science Is Only Half the Equation
               </h2>
               <p className="text-[16px] text-[#5A6560] leading-relaxed mb-4">
                 The difference between a breakthrough that changes an industry and one that stays on the
-                shelf is rarely the science — it is the strategy, the regulatory pathway, the IP
+                shelf is rarely the science, it is the strategy, the regulatory pathway, the IP
                 position, the funding, and the team. Phytosynth Bioscience provides the expertise to get
                 those things right, drawing on decades of combined experience across the bioscience sector.
               </p>
               <p className="text-[16px] text-[#5A6560] leading-relaxed">
-                Our consultancy practice is deliberately multi-disciplinary — we bring together
+                Our consultancy practice is deliberately multi-disciplinary, we bring together
                 scientists, regulatory specialists, IP attorneys, market analysts, and organisational
                 development experts in teams assembled for each client's specific challenge. No generic
                 frameworks. No recycled slide decks. Just deep expertise applied to your unique situation.
@@ -285,42 +294,42 @@ export default function ConsultancyPage() {
             </div>
 
             <div className="reveal opacity-0 grid gap-6">
-              <div className="flex gap-4 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
-                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+              <div className="flex flex-col items-center text-center gap-3 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
+                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                   {IconTarget}
                 </div>
                 <div>
                   <h4 className="text-[16px] font-bold text-[#0D0D0D] mb-1.5">Our Approach</h4>
                   <p className="text-[14px] text-[#6B7570] leading-relaxed">
-                    Every engagement begins with intensive discovery — we immerse ourselves in your
+                    Every engagement begins with intensive discovery, we immerse ourselves in your
                     technology, your market, and your constraints before offering any recommendation.
                     We believe advice is only as good as the understanding it is built on.
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-4 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
-                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+              <div className="flex flex-col items-center text-center gap-3 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
+                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                   {IconLeaf}
                 </div>
                 <div>
                   <h4 className="text-[16px] font-bold text-[#0D0D0D] mb-1.5">Evidence-Based</h4>
                   <p className="text-[14px] text-[#6B7570] leading-relaxed">
-                    Our recommendations are grounded in data — market analyses, technical feasibility
+                    Our recommendations are grounded in data, market analyses, technical feasibility
                     assessments, regulatory precedence, and financial models. We tell you what the
                     evidence says, even when it is not what you hoped to hear.
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-4 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
-                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+              <div className="flex flex-col items-center text-center gap-3 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
+                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                   {IconUsers}
                 </div>
                 <div>
                   <h4 className="text-[16px] font-bold text-[#0D0D0D] mb-1.5">Embedded Partnership</h4>
                   <p className="text-[14px] text-[#6B7570] leading-relaxed">
-                    We work alongside your team — not from a distance. Our consultants embed in your
+                    We work alongside your team, not from a distance. Our consultants embed in your
                     strategy sessions, attend your board meetings, and are available when critical
                     decisions need to be made, not just during scheduled check-ins.
                   </p>
@@ -334,7 +343,7 @@ export default function ConsultancyPage() {
         <section className="py-20 md:py-28 bg-[#F5F7F5]">
           <div className="max-w-6xl mx-auto px-6 md:px-8">
             <div className="reveal opacity-0 max-w-xl mx-auto text-center mb-14">
-              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-vibrant mb-3">
+              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-3">
                 Capabilities
               </span>
               <h2 className="text-[clamp(24px,3.5vw,36px)] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0D0D0D] mb-4">
@@ -342,7 +351,7 @@ export default function ConsultancyPage() {
               </h2>
               <p className="text-[15px] text-[#6B7570] leading-relaxed">
                 A full-spectrum advisory capability spanning strategy, markets, regulation, funding,
-                and organisational development — delivered by practitioners, not generalists.
+                and organisational development, delivered by practitioners, not generalists.
               </p>
             </div>
 
@@ -350,9 +359,9 @@ export default function ConsultancyPage() {
               {SERVICES_INCLUDE.map((item, i) => (
                 <div
                   key={item.title}
-                  className={`reveal opacity-0 bg-white border border-gray-200 rounded-2xl p-7 md:p-8 flex gap-5 hover:-translate-y-1 hover:shadow-lg hover:border-phyto-light transition-all duration-300 fade-in-${Math.min(i + 1, 4)}`}
+                  className={`reveal opacity-0 bg-white border border-gray-200 rounded-2xl p-7 md:p-8 flex flex-col items-center text-center gap-4 hover:-translate-y-1 hover:shadow-lg hover:border-phyto-light transition-all duration-300 fade-in-${Math.min(i + 1, 4)}`}
                 >
-                  <div className="w-12 h-12 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+                  <div className="w-12 h-12 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                     {item.icon}
                   </div>
                   <div>
@@ -373,15 +382,15 @@ export default function ConsultancyPage() {
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-6xl mx-auto px-6 md:px-8">
             <div className="reveal opacity-0 max-w-xl mx-auto text-center mb-14">
-              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-vibrant mb-3">
+              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-3">
                 Partners &amp; Clients
               </span>
               <h2 className="text-[clamp(24px,3.5vw,36px)] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0D0D0D] mb-4">
                 Who We Work With
               </h2>
               <p className="text-[15px] text-[#6B7570] leading-relaxed">
-                We advise organisations of every size and stage — from two-person startups to Fortune
-                500 corporations — across the global bioscience landscape.
+                We advise organisations of every size and stage, from two-person startups to Fortune
+                500 corporations, across the global bioscience landscape.
               </p>
             </div>
 
@@ -389,9 +398,9 @@ export default function ConsultancyPage() {
               {AUDIENCES.map((audience, i) => (
                 <div
                   key={audience.label}
-                  className={`reveal opacity-0 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-7 flex gap-5 hover:-translate-y-1 hover:shadow-md hover:border-phyto-pale transition-all duration-300 fade-in-${(i % 3) + 1}`}
+                  className={`reveal opacity-0 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-7 flex flex-col items-center text-center gap-4 hover:-translate-y-1 hover:shadow-md hover:border-phyto-pale transition-all duration-300 fade-in-${(i % 3) + 1}`}
                 >
-                  <div className="w-12 h-12 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-forest">
+                  <div className="w-12 h-12 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                     {audience.icon}
                   </div>
                   <div>
@@ -412,14 +421,14 @@ export default function ConsultancyPage() {
         <section className="py-20 md:py-28 bg-[#F5F7F5]">
           <div className="max-w-6xl mx-auto px-6 md:px-8">
             <div className="reveal opacity-0 max-w-xl mx-auto text-center mb-14">
-              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-vibrant mb-3">
+              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-3">
                 Outputs
               </span>
               <h2 className="text-[clamp(24px,3.5vw,36px)] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0D0D0D] mb-4">
                 Deliverables
               </h2>
               <p className="text-[15px] text-[#6B7570] leading-relaxed">
-                Every engagement produces concrete, actionable outputs — documents you can take to your
+                Every engagement produces concrete, actionable outputs, documents you can take to your
                 board, your investors, or your regulator with full confidence in their rigour.
               </p>
             </div>
@@ -428,9 +437,9 @@ export default function ConsultancyPage() {
               {DELIVERABLES.map((item, i) => (
                 <div
                   key={item.label}
-                  className={`reveal opacity-0 bg-white border border-gray-200 rounded-2xl p-7 flex gap-5 hover:-translate-y-1 hover:shadow-lg hover:border-phyto-light transition-all duration-300 fade-in-${(i % 3) + 1}`}
+                  className={`reveal opacity-0 bg-white border border-gray-200 rounded-2xl p-7 flex flex-col items-center text-center gap-4 hover:-translate-y-1 hover:shadow-lg hover:border-phyto-light transition-all duration-300 fade-in-${(i % 3) + 1}`}
                 >
-                  <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+                  <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                     {item.icon}
                   </div>
                   <div>
@@ -454,15 +463,15 @@ export default function ConsultancyPage() {
               Get Started
             </span>
             <h2 className="text-[clamp(26px,4vw,40px)] font-extrabold leading-[1.18] tracking-[-0.02em] text-white mb-5">
-              Let us help you find the right path forward
+              Let Us Help You Find the Right Path Forward
             </h2>
             <p className="text-[17px] text-[#B8D8C8] max-w-[560px] mx-auto leading-relaxed mb-8">
-              Contact Phytosynth Bioscience Ltd to discuss your strategic challenges — from market entry
+              Contact Phytosynth Bioscience Ltd to discuss your strategic challenges, from market entry
               and regulatory strategy to organisational design and fundraising.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
-                href="/#contact"
+                href="/contact"
                 className="inline-flex items-center justify-center bg-phyto-bright text-phyto-deep text-[15px] font-bold px-9 py-3.5 rounded-full hover:bg-white hover:-translate-y-px hover:shadow-lg transition-all duration-[280ms]"
               >
                 Contact Us

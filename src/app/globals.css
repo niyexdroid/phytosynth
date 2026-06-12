@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-phyto-deep: #0B2F1F;
-  --color-phyto-forest: #1B4332;
-  --color-phyto-leaf: #2D6A4F;
-  --color-phyto-vibrant: #40916C;
-  --color-phyto-bright: #52B788;
-  --color-phyto-light: #95D5B2;
-  --color-phyto-pale: #D8F3DC;
-  --color-charcoal: #1E1E1E;
+  --color-phyto-deep: #0b2f1f;
+  --color-phyto-forest: #1b4332;
+  --color-phyto-leaf: #2d6a4f;
+  --color-phyto-vibrant: #40916c;
+  --color-phyto-bright: #75c402;
+  --color-phyto-light: #75c402;
+  --color-phyto-pale: #75c402;
+  --color-charcoal: #1e1e1e;
   --font-family-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --max-width-8xl: 1280px;
   --animate-fade-in: fadeIn 0.7s ease forwards;
@@ -17,18 +17,38 @@
 }
 
 @keyframes fadeIn {
-  0%   { opacity: 0; transform: translateY(24px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes hudPulse {
-  0%, 100% { transform: scale(1); opacity: 0.6; }
-  50%      { transform: scale(1.12); opacity: 1; }
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.12);
+    opacity: 1;
+  }
 }
 
 @keyframes hudScan {
-  0%, 100% { opacity: 0.2; transform: translateX(-2%); }
-  50%      { opacity: 0.6; transform: translateX(2%); }
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: translateX(-2%);
+  }
+  50% {
+    opacity: 0.6;
+    transform: translateX(2%);
+  }
 }
 
 :root {
@@ -45,11 +65,34 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Keep centered blocks (hero, intros, CTAs) centered */
+.text-center p,
+p.text-center {
+  text-align: center;
+}
+
 /* Staggered fade-in delays */
-.fade-in-1 { animation-delay: 0ms; }
-.fade-in-2 { animation-delay: 100ms; }
-.fade-in-3 { animation-delay: 200ms; }
-.fade-in-4 { animation-delay: 300ms; }
-.fade-in-5 { animation-delay: 400ms; }
-.fade-in-6 { animation-delay: 500ms; }
-.fade-in-7 { animation-delay: 600ms; }
+.fade-in-1 {
+  animation-delay: 0ms;
+}
+.fade-in-2 {
+  animation-delay: 100ms;
+}
+.fade-in-3 {
+  animation-delay: 200ms;
+}
+.fade-in-4 {
+  animation-delay: 300ms;
+}
+.fade-in-5 {
+  animation-delay: 400ms;
+}
+.fade-in-6 {
+  animation-delay: 500ms;
+}
+.fade-in-7 {
+  animation-delay: 600ms;
+}
+.fade-in-8 {
+  animation-delay: 700ms;
+}

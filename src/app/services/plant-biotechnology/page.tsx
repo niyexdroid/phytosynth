@@ -103,7 +103,7 @@ const SERVICES_INCLUDE = [
   {
     icon: IconDNA,
     title: "Marker-Assisted Breeding",
-    desc: "Accelerate crop improvement programmes using molecular markers linked to traits of interest — drought tolerance, disease resistance, nutritional quality — reducing breeding cycle time by up to 50% compared to conventional methods.",
+    desc: "Accelerate crop improvement programmes using molecular markers linked to traits of interest, drought tolerance, disease resistance, nutritional quality, reducing breeding cycle time by up to 50% compared to conventional methods.",
   },
   {
     icon: IconEdit,
@@ -118,7 +118,7 @@ const SERVICES_INCLUDE = [
   {
     icon: IconFlask,
     title: "Genomics & Transcriptomics",
-    desc: "Whole-genome sequencing, RNA-seq, and epigenomic profiling services — from library preparation through bioinformatic analysis — to uncover the genetic architecture underlying complex agronomic traits.",
+    desc: "Whole-genome sequencing, RNA-seq, and epigenomic profiling services, from library preparation through bioinformatic analysis, to uncover the genetic architecture underlying complex agronomic traits.",
   },
   {
     icon: IconSprout,
@@ -133,12 +133,12 @@ const SERVICES_INCLUDE = [
   {
     icon: IconPill,
     title: "Metabolomics & Biochemical Profiling",
-    desc: "LC-MS and GC-MS based metabolite fingerprinting to characterise biochemical pathways, identify bioactive compounds, and validate metabolic engineering outcomes — from cannabinoids to carotenoids.",
+    desc: "LC-MS and GC-MS based metabolite fingerprinting to characterise biochemical pathways, identify bioactive compounds, and validate metabolic engineering outcomes, from cannabinoids to carotenoids.",
   },
   {
     icon: IconBook,
     title: "IP & Regulatory Support",
-    desc: "Guidance through the intellectual property landscape — freedom-to-operate analyses, patent landscape mapping, and regulatory dossiers for GM and gene-edited crop approvals in target markets.",
+    desc: "Guidance through the intellectual property landscape, freedom-to-operate analyses, patent landscape mapping, and regulatory dossiers for GM and gene-edited crop approvals in target markets.",
   },
 ];
 
@@ -179,7 +179,7 @@ const DELIVERABLES = [
   {
     icon: IconDNA,
     label: "Genotyped & Characterised Lines",
-    desc: "Fully genotyped plant lines with validated trait introgression — delivered as seed, tissue culture plantlets, or cryopreserved material with complete molecular documentation.",
+    desc: "Fully genotyped plant lines with validated trait introgression, delivered as seed, tissue culture plantlets, or cryopreserved material with complete molecular documentation.",
   },
   {
     icon: IconMicroscope,
@@ -189,17 +189,17 @@ const DELIVERABLES = [
   {
     icon: IconEdit,
     label: "Edited Constructs & Vectors",
-    desc: "Sequence-verified plasmids, binary vectors, and Agrobacterium strains ready for transformation — documented with restriction maps, sequencing chromatograms, and transformation protocols.",
+    desc: "Sequence-verified plasmids, binary vectors, and Agrobacterium strains ready for transformation, documented with restriction maps, sequencing chromatograms, and transformation protocols.",
   },
   {
     icon: IconFlask,
     label: "Standard Operating Procedures",
-    desc: "Validated, step-by-step SOPs for every protocol developed during the engagement — from media preparation to regeneration — so your team can replicate results independently.",
+    desc: "Validated, step-by-step SOPs for every protocol developed during the engagement, from media preparation to regeneration, so your team can replicate results independently.",
   },
   {
     icon: IconBook,
     label: "Bioinformatic Reports",
-    desc: "Interactive HTML reports and raw data files from genomic, transcriptomic, and metabolomic analyses — with pathway enrichment, variant annotation, and comparative genomics where applicable.",
+    desc: "Interactive HTML reports and raw data files from genomic, transcriptomic, and metabolomic analyses, with pathway enrichment, variant annotation, and comparative genomics where applicable.",
   },
 ];
 
@@ -234,7 +234,7 @@ export default function PlantBiotechPage() {
         {/* ═══════════════════════ BANNER ═══════════════════════ */}
         <section className="relative pt-[76px] h-[420px] md:h-[480px] flex items-center overflow-hidden">
           <Image
-            src="/hero-bg.png"
+            src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=1600&q=80&fit=crop"
             alt="Plant biotechnology laboratory"
             fill
             className="object-cover object-center"
@@ -249,6 +249,15 @@ export default function PlantBiotechPage() {
                 "repeating-linear-gradient(0deg, transparent, transparent 2px, white 2px, white 4px), repeating-linear-gradient(90deg, transparent, transparent 2px, white 2px, white 4px)",
             }}
           />
+          <Link
+            href="/services"
+            className="absolute top-[90px] left-5 md:left-8 z-10 inline-flex items-center gap-1.5 text-white/85 hover:text-white text-[13px] font-semibold transition-colors"
+          >
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Back to All Services
+          </Link>
           <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-8 text-center">
             <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-4">
               Services
@@ -257,7 +266,7 @@ export default function PlantBiotechPage() {
               Plant Biotechnology
             </h1>
             <p className="text-[17px] text-[#B8D8C8] max-w-[680px] mx-auto leading-relaxed">
-              From gene to field — advanced molecular biology, genomics, and tissue culture services
+              From gene to field, advanced molecular biology, genomics, and tissue culture services
               that accelerate crop improvement and bring next-generation varieties to market.
             </p>
           </div>
@@ -267,15 +276,15 @@ export default function PlantBiotechPage() {
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-5xl mx-auto px-6 md:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             <div className="reveal opacity-0">
-              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-vibrant mb-3">
+              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-3">
                 Overview
               </span>
               <h2 className="text-[clamp(24px,3.5vw,36px)] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0D0D0D] mb-5">
-                Engineering biology for a resilient food system
+                Engineering Biology for a Resilient Food System
               </h2>
               <p className="text-[16px] text-[#5A6560] leading-relaxed mb-4">
-                The world needs crops that yield more with less — less water, less fertiliser, less
-                land — while withstanding the increasing pressures of climate change. Phytosynth
+                The world needs crops that yield more with less, less water, less fertiliser, less
+                land, while withstanding the increasing pressures of climate change. Phytosynth
                 Bioscience provides the molecular toolkit and scientific expertise to make that possible,
                 bridging the gap between genomic discovery and commercial variety release.
               </p>
@@ -283,13 +292,13 @@ export default function PlantBiotechPage() {
                 Our plant biotechnology platform spans the full R&D pipeline: from gene discovery and
                 construct design, through transformation and regeneration, to molecular characterisation
                 and field evaluation. We work across cereals, legumes, roots and tubers, vegetables,
-                and industrial crops — adapting our protocols to your species, your traits, and your timeline.
+                and industrial crops, adapting our protocols to your species, your traits, and your timeline.
               </p>
             </div>
 
             <div className="reveal opacity-0 grid gap-6">
-              <div className="flex gap-4 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
-                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+              <div className="flex flex-col items-center text-center gap-3 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
+                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                   {IconTarget}
                 </div>
                 <div>
@@ -302,8 +311,8 @@ export default function PlantBiotechPage() {
                 </div>
               </div>
 
-              <div className="flex gap-4 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
-                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+              <div className="flex flex-col items-center text-center gap-3 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
+                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                   {IconLeaf}
                 </div>
                 <div>
@@ -311,19 +320,19 @@ export default function PlantBiotechPage() {
                   <p className="text-[14px] text-[#6B7570] leading-relaxed">
                     We are not tied to any single trait or technology. Whether you need drought
                     tolerance, nitrogen-use efficiency, nutritional biofortification, or herbicide
-                    resistance — we bring the right molecular tools to the table, not the other way around.
+                    resistance, we bring the right molecular tools to the table, not the other way around.
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-4 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
-                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+              <div className="flex flex-col items-center text-center gap-3 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
+                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                   {IconUsers}
                 </div>
                 <div>
                   <h4 className="text-[16px] font-bold text-[#0D0D0D] mb-1.5">Partnership Model</h4>
                   <p className="text-[14px] text-[#6B7570] leading-relaxed">
-                    We operate as an extension of your R&D team — co-designing experiments, sharing data
+                    We operate as an extension of your R&D team, co-designing experiments, sharing data
                     transparently, transferring protocols, and building your internal capability
                     throughout the engagement.
                   </p>
@@ -337,7 +346,7 @@ export default function PlantBiotechPage() {
         <section className="py-20 md:py-28 bg-[#F5F7F5]">
           <div className="max-w-6xl mx-auto px-6 md:px-8">
             <div className="reveal opacity-0 max-w-xl mx-auto text-center mb-14">
-              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-vibrant mb-3">
+              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-3">
                 Capabilities
               </span>
               <h2 className="text-[clamp(24px,3.5vw,36px)] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0D0D0D] mb-4">
@@ -345,7 +354,7 @@ export default function PlantBiotechPage() {
               </h2>
               <p className="text-[15px] text-[#6B7570] leading-relaxed">
                 A comprehensive molecular biology platform covering the full pipeline from DNA to
-                phenotyped plant — under one roof, with one team, on one timeline.
+                phenotyped plant, under one roof, with one team, on one timeline.
               </p>
             </div>
 
@@ -353,9 +362,9 @@ export default function PlantBiotechPage() {
               {SERVICES_INCLUDE.map((item, i) => (
                 <div
                   key={item.title}
-                  className={`reveal opacity-0 bg-white border border-gray-200 rounded-2xl p-7 md:p-8 flex gap-5 hover:-translate-y-1 hover:shadow-lg hover:border-phyto-light transition-all duration-300 fade-in-${Math.min(i + 1, 4)}`}
+                  className={`reveal opacity-0 bg-white border border-gray-200 rounded-2xl p-7 md:p-8 flex flex-col items-center text-center gap-4 hover:-translate-y-1 hover:shadow-lg hover:border-phyto-light transition-all duration-300 fade-in-${Math.min(i + 1, 4)}`}
                 >
-                  <div className="w-12 h-12 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+                  <div className="w-12 h-12 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                     {item.icon}
                   </div>
                   <div>
@@ -376,14 +385,14 @@ export default function PlantBiotechPage() {
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-6xl mx-auto px-6 md:px-8">
             <div className="reveal opacity-0 max-w-xl mx-auto text-center mb-14">
-              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-vibrant mb-3">
+              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-3">
                 Partners &amp; Clients
               </span>
               <h2 className="text-[clamp(24px,3.5vw,36px)] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0D0D0D] mb-4">
                 Who We Work With
               </h2>
               <p className="text-[15px] text-[#6B7570] leading-relaxed">
-                We partner with organisations across the crop improvement value chain — from gene
+                We partner with organisations across the crop improvement value chain, from gene
                 discovery to variety registration.
               </p>
             </div>
@@ -392,9 +401,9 @@ export default function PlantBiotechPage() {
               {AUDIENCES.map((audience, i) => (
                 <div
                   key={audience.label}
-                  className={`reveal opacity-0 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-7 flex gap-5 hover:-translate-y-1 hover:shadow-md hover:border-phyto-pale transition-all duration-300 fade-in-${(i % 3) + 1}`}
+                  className={`reveal opacity-0 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-7 flex flex-col items-center text-center gap-4 hover:-translate-y-1 hover:shadow-md hover:border-phyto-pale transition-all duration-300 fade-in-${(i % 3) + 1}`}
                 >
-                  <div className="w-12 h-12 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-forest">
+                  <div className="w-12 h-12 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                     {audience.icon}
                   </div>
                   <div>
@@ -415,7 +424,7 @@ export default function PlantBiotechPage() {
         <section className="py-20 md:py-28 bg-[#F5F7F5]">
           <div className="max-w-6xl mx-auto px-6 md:px-8">
             <div className="reveal opacity-0 max-w-xl mx-auto text-center mb-14">
-              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-vibrant mb-3">
+              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-3">
                 Outputs
               </span>
               <h2 className="text-[clamp(24px,3.5vw,36px)] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0D0D0D] mb-4">
@@ -423,7 +432,7 @@ export default function PlantBiotechPage() {
               </h2>
               <p className="text-[15px] text-[#6B7570] leading-relaxed">
                 At the end of every engagement, you receive complete, traceable, and reproducible
-                outputs — not just a report, but a foundation for your next phase of work.
+                outputs, not just a report, but a foundation for your next phase of work.
               </p>
             </div>
 
@@ -431,9 +440,9 @@ export default function PlantBiotechPage() {
               {DELIVERABLES.map((item, i) => (
                 <div
                   key={item.label}
-                  className={`reveal opacity-0 bg-white border border-gray-200 rounded-2xl p-7 flex gap-5 hover:-translate-y-1 hover:shadow-lg hover:border-phyto-light transition-all duration-300 fade-in-${(i % 3) + 1}`}
+                  className={`reveal opacity-0 bg-white border border-gray-200 rounded-2xl p-7 flex flex-col items-center text-center gap-4 hover:-translate-y-1 hover:shadow-lg hover:border-phyto-light transition-all duration-300 fade-in-${(i % 3) + 1}`}
                 >
-                  <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+                  <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                     {item.icon}
                   </div>
                   <div>
@@ -457,15 +466,15 @@ export default function PlantBiotechPage() {
               Get Started
             </span>
             <h2 className="text-[clamp(26px,4vw,40px)] font-extrabold leading-[1.18] tracking-[-0.02em] text-white mb-5">
-              Let us accelerate your breeding programme
+              Let Us Accelerate Your Breeding Programme
             </h2>
             <p className="text-[17px] text-[#B8D8C8] max-w-[560px] mx-auto leading-relaxed mb-8">
-              Contact Phytosynth Bioscience Ltd to discuss your plant biotechnology needs — from single
+              Contact Phytosynth Bioscience Ltd to discuss your plant biotechnology needs, from single
               experiments to multi-year research partnerships.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
-                href="/#contact"
+                href="/contact"
                 className="inline-flex items-center justify-center bg-phyto-bright text-phyto-deep text-[15px] font-bold px-9 py-3.5 rounded-full hover:bg-white hover:-translate-y-px hover:shadow-lg transition-all duration-[280ms]"
               >
                 Contact Us

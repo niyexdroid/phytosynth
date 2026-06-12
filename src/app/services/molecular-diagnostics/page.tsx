@@ -114,42 +114,42 @@ const SERVICES_INCLUDE = [
   {
     icon: IconTest,
     title: "PCR-Based Pathogen Detection",
-    desc: "Real-time and digital PCR assays for the detection and quantification of plant pathogens — fungi, bacteria, viruses, and nematodes — with limits of detection validated to regulatory standards and turnaround times measured in hours, not days.",
+    desc: "Real-time and digital PCR assays for the detection and quantification of plant pathogens, fungi, bacteria, viruses, and nematodes, with limits of detection validated to regulatory standards and turnaround times measured in hours, not days.",
   },
   {
     icon: IconChip,
     title: "LAMP & Isothermal Platforms",
-    desc: "Field-deployable loop-mediated isothermal amplification (LAMP) and RPA assays that deliver lab-quality nucleic acid detection without thermal cycling — enabling point-of-need testing in the field, at the border, or on the farm.",
+    desc: "Field-deployable loop-mediated isothermal amplification (LAMP) and RPA assays that deliver lab-quality nucleic acid detection without thermal cycling, enabling point-of-need testing in the field, at the border, or on the farm.",
   },
   {
     icon: IconPackage,
     title: "Lateral Flow & Biosensor Development",
-    desc: "Antibody-based and aptamer-based lateral flow devices and electrochemical biosensors for on-site detection of pathogens, toxins, and chemical residues — designed, validated, and manufactured in batch quantities for pilot deployment.",
+    desc: "Antibody-based and aptamer-based lateral flow devices and electrochemical biosensors for on-site detection of pathogens, toxins, and chemical residues, designed, validated, and manufactured in batch quantities for pilot deployment.",
   },
   {
     icon: IconSearch,
     title: "Next-Generation Sequencing Diagnostics",
-    desc: "Metagenomic and amplicon sequencing for comprehensive pathogen screening, microbiome profiling, and antimicrobial resistance surveillance — from DNA extraction through bioinformatic analysis and clinically actionable reporting.",
+    desc: "Metagenomic and amplicon sequencing for comprehensive pathogen screening, microbiome profiling, and antimicrobial resistance surveillance, from DNA extraction through bioinformatic analysis and clinically actionable reporting.",
   },
   {
     icon: IconWifi,
     title: "Integrated Surveillance Networks",
-    desc: "Design and deployment of pathogen surveillance systems that combine field-deployable diagnostics, cloud-based data aggregation, geospatial visualisation, and automated alerting — giving plant health authorities real-time situational awareness.",
+    desc: "Design and deployment of pathogen surveillance systems that combine field-deployable diagnostics, cloud-based data aggregation, geospatial visualisation, and automated alerting, giving plant health authorities real-time situational awareness.",
   },
   {
     icon: IconFileCheck,
     title: "Validation & Proficiency Testing",
-    desc: "Rigorous analytical and clinical validation of diagnostic assays following ISO 17025 and ISTA guidelines — sensitivity, specificity, reproducibility, and robustness tested across multiple operators, instruments, and sample matrices.",
+    desc: "Rigorous analytical and clinical validation of diagnostic assays following ISO 17025 and ISTA guidelines, sensitivity, specificity, reproducibility, and robustness tested across multiple operators, instruments, and sample matrices.",
   },
   {
     icon: IconAlert,
     title: "Emerging Threat Response",
-    desc: "Rapid assay development and deployment for newly emerging or re-emerging plant pathogens — moving from sequence to validated diagnostic within weeks, enabling containment before an outbreak becomes an epidemic.",
+    desc: "Rapid assay development and deployment for newly emerging or re-emerging plant pathogens, moving from sequence to validated diagnostic within weeks, enabling containment before an outbreak becomes an epidemic.",
   },
   {
     icon: IconCalendar,
     title: "Diagnostic Training & Capacity Building",
-    desc: "Hands-on training programmes for laboratory technicians, plant health inspectors, and extension officers — covering sample collection, assay execution, result interpretation, and quality management — delivered on-site or at our training facility.",
+    desc: "Hands-on training programmes for laboratory technicians, plant health inspectors, and extension officers, covering sample collection, assay execution, result interpretation, and quality management, delivered on-site or at our training facility.",
   },
 ];
 
@@ -190,22 +190,22 @@ const DELIVERABLES = [
   {
     icon: IconTest,
     label: "Validated Diagnostic Assays",
-    desc: "Fully validated, documented PCR, LAMP, or lateral flow assays — with standard operating procedures, positive and negative controls, and performance characteristics ready for deployment or regulatory submission.",
+    desc: "Fully validated, documented PCR, LAMP, or lateral flow assays, with standard operating procedures, positive and negative controls, and performance characteristics ready for deployment or regulatory submission.",
   },
   {
     icon: IconFileCheck,
     label: "Diagnostic Reports",
-    desc: "Detailed, signed laboratory reports for each sample batch — including methodology, raw data, interpreted results, and quality control metrics — suitable for regulatory submission or commercial decision-making.",
+    desc: "Detailed, signed laboratory reports for each sample batch, including methodology, raw data, interpreted results, and quality control metrics, suitable for regulatory submission or commercial decision-making.",
   },
   {
     icon: IconSearch,
     label: "Pathogen Surveillance Dashboards",
-    desc: "Interactive web-based dashboards displaying real-time pathogen detection data with geospatial mapping, temporal trends, and automated alerts — configurable for different users and jurisdictions.",
+    desc: "Interactive web-based dashboards displaying real-time pathogen detection data with geospatial mapping, temporal trends, and automated alerts, configurable for different users and jurisdictions.",
   },
   {
     icon: IconPackage,
     label: "Field Diagnostic Kits",
-    desc: "Pre-assembled, batch-manufactured field kits containing all reagents, consumables, and instructions for on-site testing — with冷链 management plans and shelf-life documentation.",
+    desc: "Pre-assembled, batch-manufactured field kits containing all reagents, consumables, and instructions for on-site testing, with冷链 management plans and shelf-life documentation.",
   },
   {
     icon: IconChip,
@@ -245,7 +245,7 @@ export default function MolDiagPage() {
         {/* ═══════════════════════ BANNER ═══════════════════════ */}
         <section className="relative pt-[76px] h-[420px] md:h-[480px] flex items-center overflow-hidden">
           <Image
-            src="/hero-bg.png"
+            src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1600&q=80&fit=crop"
             alt="Molecular diagnostics laboratory"
             fill
             className="object-cover object-center"
@@ -260,6 +260,15 @@ export default function MolDiagPage() {
                 "repeating-linear-gradient(0deg, transparent, transparent 2px, white 2px, white 4px), repeating-linear-gradient(90deg, transparent, transparent 2px, white 2px, white 4px)",
             }}
           />
+          <Link
+            href="/services"
+            className="absolute top-[90px] left-5 md:left-8 z-10 inline-flex items-center gap-1.5 text-white/85 hover:text-white text-[13px] font-semibold transition-colors"
+          >
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Back to All Services
+          </Link>
           <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-8 text-center">
             <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-4">
               Services
@@ -269,7 +278,7 @@ export default function MolDiagPage() {
             </h1>
             <p className="text-[17px] text-[#B8D8C8] max-w-[680px] mx-auto leading-relaxed">
               Rapid, accurate, and field-ready molecular testing for plant pathogens, environmental
-              monitoring, and biosecurity — from the lab to the field, results you can trust.
+              monitoring, and biosecurity, from the lab to the field, results you can trust.
             </p>
           </div>
         </section>
@@ -278,36 +287,36 @@ export default function MolDiagPage() {
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-5xl mx-auto px-6 md:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             <div className="reveal opacity-0">
-              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-vibrant mb-3">
+              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-3">
                 Overview
               </span>
               <h2 className="text-[clamp(24px,3.5vw,36px)] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0D0D0D] mb-5">
-                Finding the signal before it becomes a symptom
+                Finding the Signal Before It Becomes a Symptom
               </h2>
               <p className="text-[16px] text-[#5A6560] leading-relaxed mb-4">
                 Every lost season, every rejected shipment, and every pesticide application that could
                 have been avoided starts with one thing: a detection that came too late. Phytosynth
                 Bioscience exists to change that. Our molecular diagnostics platform delivers lab-quality
-                results at the speed decisions demand — whether in a central reference laboratory or at
+                results at the speed decisions demand, whether in a central reference laboratory or at
                 the farm gate.
               </p>
               <p className="text-[16px] text-[#5A6560] leading-relaxed">
                 We develop, validate, and deploy nucleic acid and protein-based diagnostic assays for
-                the full spectrum of plant-associated threats — fungi, bacteria, viruses, viroids,
-                nematodes, and insect vectors — and we build the surveillance networks that turn
+                the full spectrum of plant-associated threats, fungi, bacteria, viruses, viroids,
+                nematodes, and insect vectors, and we build the surveillance networks that turn
                 individual test results into actionable intelligence.
               </p>
             </div>
 
             <div className="reveal opacity-0 grid gap-6">
-              <div className="flex gap-4 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
-                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+              <div className="flex flex-col items-center text-center gap-3 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
+                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                   {IconTarget}
                 </div>
                 <div>
                   <h4 className="text-[16px] font-bold text-[#0D0D0D] mb-1.5">Our Approach</h4>
                   <p className="text-[14px] text-[#6B7570] leading-relaxed">
-                    We do not just run samples — we build diagnostic capability. Every engagement starts
+                    We do not just run samples, we build diagnostic capability. Every engagement starts
                     with a thorough assessment of your detection needs, sample types, throughput
                     requirements, and deployment context. We then design an assay and workflow that fits
                     your reality, not just our laboratory.
@@ -315,8 +324,8 @@ export default function MolDiagPage() {
                 </div>
               </div>
 
-              <div className="flex gap-4 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
-                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+              <div className="flex flex-col items-center text-center gap-3 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
+                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                   {IconLeaf}
                 </div>
                 <div>
@@ -329,15 +338,15 @@ export default function MolDiagPage() {
                 </div>
               </div>
 
-              <div className="flex gap-4 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
-                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+              <div className="flex flex-col items-center text-center gap-3 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
+                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                   {IconUsers}
                 </div>
                 <div>
                   <h4 className="text-[16px] font-bold text-[#0D0D0D] mb-1.5">Regulatory Confidence</h4>
                   <p className="text-[14px] text-[#6B7570] leading-relaxed">
                     Every assay we release is validated according to international standards. When a
-                    result leaves our lab — or a kit leaves our facility — it comes with the
+                    result leaves our lab, or a kit leaves our facility, it comes with the
                     documentation regulators and trading partners demand.
                   </p>
                 </div>
@@ -350,14 +359,14 @@ export default function MolDiagPage() {
         <section className="py-20 md:py-28 bg-[#F5F7F5]">
           <div className="max-w-6xl mx-auto px-6 md:px-8">
             <div className="reveal opacity-0 max-w-xl mx-auto text-center mb-14">
-              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-vibrant mb-3">
+              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-3">
                 Capabilities
               </span>
               <h2 className="text-[clamp(24px,3.5vw,36px)] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0D0D0D] mb-4">
                 Services Include
               </h2>
               <p className="text-[15px] text-[#6B7570] leading-relaxed">
-                A full-spectrum molecular diagnostics capability — from assay concept and development
+                A full-spectrum molecular diagnostics capability, from assay concept and development
                 through to validation, manufacturing, and surveillance network deployment.
               </p>
             </div>
@@ -366,9 +375,9 @@ export default function MolDiagPage() {
               {SERVICES_INCLUDE.map((item, i) => (
                 <div
                   key={item.title}
-                  className={`reveal opacity-0 bg-white border border-gray-200 rounded-2xl p-7 md:p-8 flex gap-5 hover:-translate-y-1 hover:shadow-lg hover:border-phyto-light transition-all duration-300 fade-in-${Math.min(i + 1, 4)}`}
+                  className={`reveal opacity-0 bg-white border border-gray-200 rounded-2xl p-7 md:p-8 flex flex-col items-center text-center gap-4 hover:-translate-y-1 hover:shadow-lg hover:border-phyto-light transition-all duration-300 fade-in-${Math.min(i + 1, 4)}`}
                 >
-                  <div className="w-12 h-12 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+                  <div className="w-12 h-12 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                     {item.icon}
                   </div>
                   <div>
@@ -389,14 +398,14 @@ export default function MolDiagPage() {
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-6xl mx-auto px-6 md:px-8">
             <div className="reveal opacity-0 max-w-xl mx-auto text-center mb-14">
-              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-vibrant mb-3">
+              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-3">
                 Partners &amp; Clients
               </span>
               <h2 className="text-[clamp(24px,3.5vw,36px)] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0D0D0D] mb-4">
                 Who We Work With
               </h2>
               <p className="text-[15px] text-[#6B7570] leading-relaxed">
-                We serve every organisation with a stake in plant health — from the inspector at the
+                We serve every organisation with a stake in plant health, from the inspector at the
                 border to the breeder protecting a billion-dollar germplasm collection.
               </p>
             </div>
@@ -405,9 +414,9 @@ export default function MolDiagPage() {
               {AUDIENCES.map((audience, i) => (
                 <div
                   key={audience.label}
-                  className={`reveal opacity-0 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-7 flex gap-5 hover:-translate-y-1 hover:shadow-md hover:border-phyto-pale transition-all duration-300 fade-in-${(i % 3) + 1}`}
+                  className={`reveal opacity-0 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-7 flex flex-col items-center text-center gap-4 hover:-translate-y-1 hover:shadow-md hover:border-phyto-pale transition-all duration-300 fade-in-${(i % 3) + 1}`}
                 >
-                  <div className="w-12 h-12 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-forest">
+                  <div className="w-12 h-12 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                     {audience.icon}
                   </div>
                   <div>
@@ -428,14 +437,14 @@ export default function MolDiagPage() {
         <section className="py-20 md:py-28 bg-[#F5F7F5]">
           <div className="max-w-6xl mx-auto px-6 md:px-8">
             <div className="reveal opacity-0 max-w-xl mx-auto text-center mb-14">
-              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-vibrant mb-3">
+              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-3">
                 Outputs
               </span>
               <h2 className="text-[clamp(24px,3.5vw,36px)] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0D0D0D] mb-4">
                 Deliverables
               </h2>
               <p className="text-[15px] text-[#6B7570] leading-relaxed">
-                Every engagement produces validated, deployable diagnostic capability — not just data,
+                Every engagement produces validated, deployable diagnostic capability, not just data,
                 but the tools, documentation, and training to sustain it independently.
               </p>
             </div>
@@ -444,9 +453,9 @@ export default function MolDiagPage() {
               {DELIVERABLES.map((item, i) => (
                 <div
                   key={item.label}
-                  className={`reveal opacity-0 bg-white border border-gray-200 rounded-2xl p-7 flex gap-5 hover:-translate-y-1 hover:shadow-lg hover:border-phyto-light transition-all duration-300 fade-in-${(i % 3) + 1}`}
+                  className={`reveal opacity-0 bg-white border border-gray-200 rounded-2xl p-7 flex flex-col items-center text-center gap-4 hover:-translate-y-1 hover:shadow-lg hover:border-phyto-light transition-all duration-300 fade-in-${(i % 3) + 1}`}
                 >
-                  <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+                  <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                     {item.icon}
                   </div>
                   <div>
@@ -470,15 +479,15 @@ export default function MolDiagPage() {
               Get Started
             </span>
             <h2 className="text-[clamp(26px,4vw,40px)] font-extrabold leading-[1.18] tracking-[-0.02em] text-white mb-5">
-              Know sooner, act faster
+              Know Sooner, Act Faster
             </h2>
             <p className="text-[17px] text-[#B8D8C8] max-w-[560px] mx-auto leading-relaxed mb-8">
-              Contact Phytosynth Bioscience Ltd to discuss your diagnostic needs — from assay
+              Contact Phytosynth Bioscience Ltd to discuss your diagnostic needs, from assay
               development to nationwide surveillance network design.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
-                href="/#contact"
+                href="/contact"
                 className="inline-flex items-center justify-center bg-phyto-bright text-phyto-deep text-[15px] font-bold px-9 py-3.5 rounded-full hover:bg-white hover:-translate-y-px hover:shadow-lg transition-all duration-[280ms]"
               >
                 Contact Us

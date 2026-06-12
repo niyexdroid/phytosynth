@@ -107,22 +107,22 @@ const SERVICES_INCLUDE = [
   {
     icon: IconGlobe,
     title: "Water Quality Management",
-    desc: "Monitoring and treatment of agricultural runoff, industrial effluents, and natural water bodies using biofiltration, constructed wetlands, and microbial degradation — turning waste streams into recovered resources.",
+    desc: "Monitoring and treatment of agricultural runoff, industrial effluents, and natural water bodies using biofiltration, constructed wetlands, and microbial degradation, turning waste streams into recovered resources.",
   },
   {
     icon: IconRecycle,
     title: "Waste Bioconversion",
-    desc: "Transforming agricultural, food-processing, and municipal organic waste into valuable products — compost, biochar, biogas, and insect protein — using optimised microbial consortia and invertebrate bioprocessing systems.",
+    desc: "Transforming agricultural, food-processing, and municipal organic waste into valuable products, compost, biochar, biogas, and insect protein, using optimised microbial consortia and invertebrate bioprocessing systems.",
   },
   {
     icon: IconBug,
     title: "Bioremediation",
-    desc: "Deployment of native and engineered microorganisms to degrade pesticides, hydrocarbons, heavy metals, and emerging contaminants in soil and water — monitored with molecular tools that track degradation kinetics and microbial community shifts.",
+    desc: "Deployment of native and engineered microorganisms to degrade pesticides, hydrocarbons, heavy metals, and emerging contaminants in soil and water, monitored with molecular tools that track degradation kinetics and microbial community shifts.",
   },
   {
     icon: IconThermometer,
     title: "Climate Resilience Planning",
-    desc: "Vulnerability assessments and adaptation roadmaps for farms, watersheds, and regions — combining downscaled climate projections with on-the-ground ecological data to identify the most cost-effective resilience investments.",
+    desc: "Vulnerability assessments and adaptation roadmaps for farms, watersheds, and regions, combining downscaled climate projections with on-the-ground ecological data to identify the most cost-effective resilience investments.",
   },
   {
     icon: IconWind,
@@ -132,12 +132,12 @@ const SERVICES_INCLUDE = [
   {
     icon: IconMountain,
     title: "Ecosystem Restoration",
-    desc: "Design and implementation of restoration projects for degraded landscapes — reforestation, wetland rehabilitation, riparian buffer establishment, and invasive species management — grounded in ecological science and community engagement.",
+    desc: "Design and implementation of restoration projects for degraded landscapes, reforestation, wetland rehabilitation, riparian buffer establishment, and invasive species management, grounded in ecological science and community engagement.",
   },
   {
     icon: IconZap,
     title: "Bioenergy & Bioeconomy",
-    desc: "Feasibility studies and technology validation for bioenergy pathways — anaerobic digestion, algal biofuels, lignocellulosic ethanol — integrated with waste streams and agricultural residues to create circular bioeconomy systems.",
+    desc: "Feasibility studies and technology validation for bioenergy pathways, anaerobic digestion, algal biofuels, lignocellulosic ethanol, integrated with waste streams and agricultural residues to create circular bioeconomy systems.",
   },
 ];
 
@@ -155,12 +155,12 @@ const AUDIENCES = [
   {
     icon: IconRecycle,
     label: "Waste Management Firms",
-    desc: "Companies handling organic waste streams who want to move up the value chain — from disposal to bioconversion — producing revenue-generating products from what was once a cost centre.",
+    desc: "Companies handling organic waste streams who want to move up the value chain, from disposal to bioconversion, producing revenue-generating products from what was once a cost centre.",
   },
   {
     icon: IconGlobe,
     label: "Extractive Industries",
-    desc: "Mining and oil & gas companies with remediation obligations on disturbed lands, tailings facilities, and contaminated sites — requiring scientifically rigorous, regulator-accepted biological solutions.",
+    desc: "Mining and oil & gas companies with remediation obligations on disturbed lands, tailings facilities, and contaminated sites, requiring scientifically rigorous, regulator-accepted biological solutions.",
   },
   {
     icon: IconZap,
@@ -178,12 +178,12 @@ const DELIVERABLES = [
   {
     icon: IconBug,
     label: "Microbiome Assessment Reports",
-    desc: "Comprehensive soil and water microbial community profiles using 16S/ITS amplicon sequencing or shotgun metagenomics — with diversity indices, functional predictions, and management recommendations.",
+    desc: "Comprehensive soil and water microbial community profiles using 16S/ITS amplicon sequencing or shotgun metagenomics, with diversity indices, functional predictions, and management recommendations.",
   },
   {
     icon: IconRecycle,
     label: "Bioprocess Design Packages",
-    desc: "Engineering specifications for bioremediation systems, composting facilities, or anaerobic digesters — including mass balances, energy budgets, equipment lists, and operational SOPs.",
+    desc: "Engineering specifications for bioremediation systems, composting facilities, or anaerobic digesters, including mass balances, energy budgets, equipment lists, and operational SOPs.",
   },
   {
     icon: IconDroplet,
@@ -193,7 +193,7 @@ const DELIVERABLES = [
   {
     icon: IconThermometer,
     label: "Climate Adaptation Roadmaps",
-    desc: "Prioritised, costed, and phased action plans for climate resilience — covering crop diversification, water infrastructure, soil conservation, and institutional capacity building.",
+    desc: "Prioritised, costed, and phased action plans for climate resilience, covering crop diversification, water infrastructure, soil conservation, and institutional capacity building.",
   },
   {
     icon: IconMountain,
@@ -233,7 +233,7 @@ export default function EnvBioPage() {
         {/* ═══════════════════════ BANNER ═══════════════════════ */}
         <section className="relative pt-[76px] h-[420px] md:h-[480px] flex items-center overflow-hidden">
           <Image
-            src="/hero-bg.png"
+            src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1600&q=80&fit=crop"
             alt="Environmental biosolutions and ecosystem restoration"
             fill
             className="object-cover object-center"
@@ -248,6 +248,15 @@ export default function EnvBioPage() {
                 "repeating-linear-gradient(0deg, transparent, transparent 2px, white 2px, white 4px), repeating-linear-gradient(90deg, transparent, transparent 2px, white 2px, white 4px)",
             }}
           />
+          <Link
+            href="/services"
+            className="absolute top-[90px] left-5 md:left-8 z-10 inline-flex items-center gap-1.5 text-white/85 hover:text-white text-[13px] font-semibold transition-colors"
+          >
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Back to All Services
+          </Link>
           <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-8 text-center">
             <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-4">
               Services
@@ -256,7 +265,7 @@ export default function EnvBioPage() {
               Environmental Biosolutions
             </h1>
             <p className="text-[17px] text-[#B8D8C8] max-w-[680px] mx-auto leading-relaxed">
-              Harnessing the power of biology to solve environmental challenges — from soil remediation
+              Harnessing the power of biology to solve environmental challenges, from soil remediation
               and water treatment to carbon sequestration and ecosystem restoration.
             </p>
           </div>
@@ -266,43 +275,43 @@ export default function EnvBioPage() {
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-5xl mx-auto px-6 md:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             <div className="reveal opacity-0">
-              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-vibrant mb-3">
+              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-3">
                 Overview
               </span>
               <h2 className="text-[clamp(24px,3.5vw,36px)] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0D0D0D] mb-5">
-                Nature is the most powerful engineer we know
+                Nature Is the Most Powerful Engineer We Know
               </h2>
               <p className="text-[16px] text-[#5A6560] leading-relaxed mb-4">
-                The greatest environmental challenges of our time — degraded soils, contaminated water,
-                collapsing biodiversity, rising carbon emissions — are not problems we can solve with
+                The greatest environmental challenges of our time, degraded soils, contaminated water,
+                collapsing biodiversity, rising carbon emissions, are not problems we can solve with
                 chemistry alone. They require biological solutions that work with nature, not against it.
                 Phytosynth Bioscience develops and deploys those solutions at scale.
               </p>
               <p className="text-[16px] text-[#5A6560] leading-relaxed">
                 Our environmental biosolutions practice combines microbiology, ecology, and process
                 engineering to design systems that clean water, rebuild soils, convert waste into
-                resources, and capture carbon — delivering measurable environmental and economic returns
+                resources, and capture carbon, delivering measurable environmental and economic returns
                 for our clients and the planet.
               </p>
             </div>
 
             <div className="reveal opacity-0 grid gap-6">
-              <div className="flex gap-4 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
-                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+              <div className="flex flex-col items-center text-center gap-3 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
+                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                   {IconTarget}
                 </div>
                 <div>
                   <h4 className="text-[16px] font-bold text-[#0D0D0D] mb-1.5">Our Approach</h4>
                   <p className="text-[14px] text-[#6B7570] leading-relaxed">
-                    We begin with a systems-level diagnosis — mapping material flows, characterising
-                    microbial communities, and quantifying environmental baselines — before designing
+                    We begin with a systems-level diagnosis, mapping material flows, characterising
+                    microbial communities, and quantifying environmental baselines, before designing
                     biological interventions that address root causes, not symptoms.
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-4 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
-                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+              <div className="flex flex-col items-center text-center gap-3 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
+                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                   {IconLeaf}
                 </div>
                 <div>
@@ -310,21 +319,21 @@ export default function EnvBioPage() {
                   <p className="text-[14px] text-[#6B7570] leading-relaxed">
                     Every solution we design treats waste as a resource out of place. Our systems convert
                     agricultural residues, food-processing by-products, and contaminated media into
-                    valuable outputs — closing loops and creating revenue streams from what was once a liability.
+                    valuable outputs, closing loops and creating revenue streams from what was once a liability.
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-4 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
-                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+              <div className="flex flex-col items-center text-center gap-3 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
+                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                   {IconUsers}
                 </div>
                 <div>
                   <h4 className="text-[16px] font-bold text-[#0D0D0D] mb-1.5">Measurable Impact</h4>
                   <p className="text-[14px] text-[#6B7570] leading-relaxed">
                     We do not deal in vague promises of "greener" outcomes. Every project is built around
-                    quantified KPIs — tonnes of carbon sequestered, hectares restored, contaminant levels
-                    reduced, waste diverted — measured, verified, and reported transparently.
+                    quantified KPIs, tonnes of carbon sequestered, hectares restored, contaminant levels
+                    reduced, waste diverted, measured, verified, and reported transparently.
                   </p>
                 </div>
               </div>
@@ -336,14 +345,14 @@ export default function EnvBioPage() {
         <section className="py-20 md:py-28 bg-[#F5F7F5]">
           <div className="max-w-6xl mx-auto px-6 md:px-8">
             <div className="reveal opacity-0 max-w-xl mx-auto text-center mb-14">
-              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-vibrant mb-3">
+              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-3">
                 Capabilities
               </span>
               <h2 className="text-[clamp(24px,3.5vw,36px)] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0D0D0D] mb-4">
                 Services Include
               </h2>
               <p className="text-[15px] text-[#6B7570] leading-relaxed">
-                End-to-end environmental services — from baseline assessment and diagnostic science
+                End-to-end environmental services, from baseline assessment and diagnostic science
                 through to engineering design, deployment, and long-term monitoring.
               </p>
             </div>
@@ -352,9 +361,9 @@ export default function EnvBioPage() {
               {SERVICES_INCLUDE.map((item, i) => (
                 <div
                   key={item.title}
-                  className={`reveal opacity-0 bg-white border border-gray-200 rounded-2xl p-7 md:p-8 flex gap-5 hover:-translate-y-1 hover:shadow-lg hover:border-phyto-light transition-all duration-300 fade-in-${Math.min(i + 1, 4)}`}
+                  className={`reveal opacity-0 bg-white border border-gray-200 rounded-2xl p-7 md:p-8 flex flex-col items-center text-center gap-4 hover:-translate-y-1 hover:shadow-lg hover:border-phyto-light transition-all duration-300 fade-in-${Math.min(i + 1, 4)}`}
                 >
-                  <div className="w-12 h-12 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+                  <div className="w-12 h-12 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                     {item.icon}
                   </div>
                   <div>
@@ -375,14 +384,14 @@ export default function EnvBioPage() {
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-6xl mx-auto px-6 md:px-8">
             <div className="reveal opacity-0 max-w-xl mx-auto text-center mb-14">
-              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-vibrant mb-3">
+              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-3">
                 Partners &amp; Clients
               </span>
               <h2 className="text-[clamp(24px,3.5vw,36px)] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0D0D0D] mb-4">
                 Who We Work With
               </h2>
               <p className="text-[15px] text-[#6B7570] leading-relaxed">
-                We serve every actor with a stake in environmental health — from the farmer tending a
+                We serve every actor with a stake in environmental health, from the farmer tending a
                 single watershed to the ministry setting national policy.
               </p>
             </div>
@@ -391,9 +400,9 @@ export default function EnvBioPage() {
               {AUDIENCES.map((audience, i) => (
                 <div
                   key={audience.label}
-                  className={`reveal opacity-0 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-7 flex gap-5 hover:-translate-y-1 hover:shadow-md hover:border-phyto-pale transition-all duration-300 fade-in-${(i % 3) + 1}`}
+                  className={`reveal opacity-0 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-7 flex flex-col items-center text-center gap-4 hover:-translate-y-1 hover:shadow-md hover:border-phyto-pale transition-all duration-300 fade-in-${(i % 3) + 1}`}
                 >
-                  <div className="w-12 h-12 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-forest">
+                  <div className="w-12 h-12 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                     {audience.icon}
                   </div>
                   <div>
@@ -414,14 +423,14 @@ export default function EnvBioPage() {
         <section className="py-20 md:py-28 bg-[#F5F7F5]">
           <div className="max-w-6xl mx-auto px-6 md:px-8">
             <div className="reveal opacity-0 max-w-xl mx-auto text-center mb-14">
-              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-vibrant mb-3">
+              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-3">
                 Outputs
               </span>
               <h2 className="text-[clamp(24px,3.5vw,36px)] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0D0D0D] mb-4">
                 Deliverables
               </h2>
               <p className="text-[15px] text-[#6B7570] leading-relaxed">
-                Every project delivers operational assets, not just advisory documents — systems that
+                Every project delivers operational assets, not just advisory documents, systems that
                 work, plans that can be built, and data that stands up to third-party scrutiny.
               </p>
             </div>
@@ -430,9 +439,9 @@ export default function EnvBioPage() {
               {DELIVERABLES.map((item, i) => (
                 <div
                   key={item.label}
-                  className={`reveal opacity-0 bg-white border border-gray-200 rounded-2xl p-7 flex gap-5 hover:-translate-y-1 hover:shadow-lg hover:border-phyto-light transition-all duration-300 fade-in-${(i % 3) + 1}`}
+                  className={`reveal opacity-0 bg-white border border-gray-200 rounded-2xl p-7 flex flex-col items-center text-center gap-4 hover:-translate-y-1 hover:shadow-lg hover:border-phyto-light transition-all duration-300 fade-in-${(i % 3) + 1}`}
                 >
-                  <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+                  <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                     {item.icon}
                   </div>
                   <div>
@@ -456,15 +465,15 @@ export default function EnvBioPage() {
               Get Started
             </span>
             <h2 className="text-[clamp(26px,4vw,40px)] font-extrabold leading-[1.18] tracking-[-0.02em] text-white mb-5">
-              Let us help you restore and regenerate
+              Let Us Help You Restore and Regenerate
             </h2>
             <p className="text-[17px] text-[#B8D8C8] max-w-[560px] mx-auto leading-relaxed mb-8">
-              Contact Phytosynth Bioscience Ltd to discuss your environmental challenges — from
+              Contact Phytosynth Bioscience Ltd to discuss your environmental challenges, from
               contaminated site assessment to landscape-scale restoration planning.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
-                href="/#contact"
+                href="/contact"
                 className="inline-flex items-center justify-center bg-phyto-bright text-phyto-deep text-[15px] font-bold px-9 py-3.5 rounded-full hover:bg-white hover:-translate-y-px hover:shadow-lg transition-all duration-[280ms]"
               >
                 Contact Us

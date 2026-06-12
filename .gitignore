@@ -1,6 +1,5 @@
 .next
-.deepseek
-%SystemDrive%
 node_modules
-Python 
-.claude
+.deepseek
+.env
+out/

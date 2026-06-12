@@ -101,7 +101,7 @@ const SERVICES_INCLUDE = [
   {
     icon: IconEye,
     title: "Crop Monitoring & Surveillance",
-    desc: "Satellite and drone-based remote sensing pipelines that detect crop stress, disease outbreaks, and nutrient deficiencies days before they become visible to the naked eye — giving you time to act, not react.",
+    desc: "Satellite and drone-based remote sensing pipelines that detect crop stress, disease outbreaks, and nutrient deficiencies days before they become visible to the naked eye, giving you time to act, not react.",
   },
   {
     icon: IconBrain,
@@ -111,7 +111,7 @@ const SERVICES_INCLUDE = [
   {
     icon: IconTrending,
     title: "Predictive Analytics",
-    desc: "Time-series forecasting engines that combine weather projections, soil moisture trajectories, and phenological models to predict outcomes 7, 14, and 30 days ahead — so you can plan irrigation, fertilisation, and labour with confidence.",
+    desc: "Time-series forecasting engines that combine weather projections, soil moisture trajectories, and phenological models to predict outcomes 7, 14, and 30 days ahead, so you can plan irrigation, fertilisation, and labour with confidence.",
   },
   {
     icon: IconCloud,
@@ -121,22 +121,22 @@ const SERVICES_INCLUDE = [
   {
     icon: IconLayers,
     title: "Data Fusion & Integration",
-    desc: "Multi-source data harmonisation — satellite, drone, soil sensor, weather station, equipment telemetry — into a single analytics-ready data lake with standardised schemas and quality-controlled ingestion pipelines.",
+    desc: "Multi-source data harmonisation, satellite, drone, soil sensor, weather station, equipment telemetry, into a single analytics-ready data lake with standardised schemas and quality-controlled ingestion pipelines.",
   },
   {
     icon: IconSatellite,
     title: "Decision Support Systems",
-    desc: "Interactive dashboards and mobile alerts that translate model outputs into plain-language recommendations: when to irrigate, where to scout, what to spray, and how much to apply — delivered to the right person at the right time.",
+    desc: "Interactive dashboards and mobile alerts that translate model outputs into plain-language recommendations: when to irrigate, where to scout, what to spray, and how much to apply, delivered to the right person at the right time.",
   },
   {
     icon: IconTerminal,
     title: "API & Integration Services",
-    desc: "RESTful and GraphQL APIs that connect AI model outputs directly into your existing farm management software, ERP systems, or customer-facing applications — no rip-and-replace required.",
+    desc: "RESTful and GraphQL APIs that connect AI model outputs directly into your existing farm management software, ERP systems, or customer-facing applications, no rip-and-replace required.",
   },
   {
     icon: IconBarChart,
     title: "Model Validation & Benchmarking",
-    desc: "Rigorous independent validation of AI models against ground-truth data, including blind trials, cross-season testing, and performance benchmarking against industry-standard metrics — so you know exactly what your models can and cannot do.",
+    desc: "Rigorous independent validation of AI models against ground-truth data, including blind trials, cross-season testing, and performance benchmarking against industry-standard metrics, so you know exactly what your models can and cannot do.",
   },
 ];
 
@@ -192,7 +192,7 @@ const DELIVERABLES = [
   {
     icon: IconTrending,
     label: "Decision Alerts",
-    desc: "Configurable SMS, email, and in-app notifications triggered when model outputs cross predefined thresholds — irrigation stress, disease risk, or pest pressure exceeding action levels.",
+    desc: "Configurable SMS, email, and in-app notifications triggered when model outputs cross predefined thresholds, irrigation stress, disease risk, or pest pressure exceeding action levels.",
   },
   {
     icon: IconLayers,
@@ -232,7 +232,7 @@ export default function AIAgriculturePage() {
         {/* ═══════════════════════ BANNER ═══════════════════════ */}
         <section className="relative pt-[76px] h-[420px] md:h-[480px] flex items-center overflow-hidden">
           <Image
-            src="/hero-bg.png"
+            src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=80&fit=crop"
             alt="AI-powered agricultural analytics"
             fill
             className="object-cover object-center"
@@ -247,6 +247,15 @@ export default function AIAgriculturePage() {
                 "repeating-linear-gradient(0deg, transparent, transparent 2px, white 2px, white 4px), repeating-linear-gradient(90deg, transparent, transparent 2px, white 2px, white 4px)",
             }}
           />
+          <Link
+            href="/services"
+            className="absolute top-[90px] left-5 md:left-8 z-10 inline-flex items-center gap-1.5 text-white/85 hover:text-white text-[13px] font-semibold transition-colors"
+          >
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Back to All Services
+          </Link>
           <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-8 text-center">
             <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-4">
               Services
@@ -256,7 +265,7 @@ export default function AIAgriculturePage() {
             </h1>
             <p className="text-[17px] text-[#B8D8C8] max-w-[680px] mx-auto leading-relaxed">
               Machine learning, computer vision, and predictive analytics deployed across the
-              agricultural value chain — from field to fork — to drive smarter, faster, and more
+              agricultural value chain, from field to fork, to drive smarter, faster, and more
               profitable decisions.
             </p>
           </div>
@@ -266,64 +275,64 @@ export default function AIAgriculturePage() {
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-5xl mx-auto px-6 md:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             <div className="reveal opacity-0">
-              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-vibrant mb-3">
+              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-3">
                 Overview
               </span>
               <h2 className="text-[clamp(24px,3.5vw,36px)] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0D0D0D] mb-5">
-                Intelligence that grows with every season
+                Intelligence That Grows With Every Season
               </h2>
               <p className="text-[16px] text-[#5A6560] leading-relaxed mb-4">
-                Agriculture generates more data per hectare than almost any other industry — yet most of
+                Agriculture generates more data per hectare than almost any other industry, yet most of
                 it goes unused. Phytosynth Bioscience closes that gap. We build and deploy AI systems
                 that transform raw sensor streams, satellite imagery, and historical records into
                 actionable intelligence for growers, agribusinesses, and policymakers.
               </p>
               <p className="text-[16px] text-[#5A6560] leading-relaxed">
-                Our models are trained on real-world agricultural data — not generic benchmarks — and
+                Our models are trained on real-world agricultural data, not generic benchmarks, and
                 validated across multiple seasons, geographies, and cropping systems. The result:
                 predictions you can trust, recommendations you can act on, and returns you can measure.
               </p>
             </div>
 
             <div className="reveal opacity-0 grid gap-6">
-              <div className="flex gap-4 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
-                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+              <div className="flex flex-col items-center text-center gap-3 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
+                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                   {IconTarget}
                 </div>
                 <div>
                   <h4 className="text-[16px] font-bold text-[#0D0D0D] mb-1.5">Our Approach</h4>
                   <p className="text-[14px] text-[#6B7570] leading-relaxed">
-                    We start with your data and your questions — not our models. Every engagement begins
+                    We start with your data and your questions, not our models. Every engagement begins
                     with a data audit and problem-framing workshop to ensure we solve the right problem
                     with the right tools, then iterate with your team throughout development.
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-4 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
-                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+              <div className="flex flex-col items-center text-center gap-3 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
+                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                   {IconLeaf}
                 </div>
                 <div>
                   <h4 className="text-[16px] font-bold text-[#0D0D0D] mb-1.5">Grounded in Agronomy</h4>
                   <p className="text-[14px] text-[#6B7570] leading-relaxed">
                     AI without agronomy is just pattern matching. Our team includes both data scientists
-                    and crop scientists, ensuring every model respects biological reality — phenology,
+                    and crop scientists, ensuring every model respects biological reality, phenology,
                     soil chemistry, and plant physiology are baked into our architectures, not ignored by them.
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-4 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
-                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+              <div className="flex flex-col items-center text-center gap-3 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
+                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                   {IconUsers}
                 </div>
                 <div>
                   <h4 className="text-[16px] font-bold text-[#0D0D0D] mb-1.5">Built for Users</h4>
                   <p className="text-[14px] text-[#6B7570] leading-relaxed">
                     A model that sits on a server is worthless. We design outputs for the people who will
-                    use them — simple dashboards for farm managers, detailed reports for agronomists,
-                    clean APIs for developers — so intelligence reaches the field, not just the presentation deck.
+                    use them, simple dashboards for farm managers, detailed reports for agronomists,
+                    clean APIs for developers, so intelligence reaches the field, not just the presentation deck.
                   </p>
                 </div>
               </div>
@@ -335,7 +344,7 @@ export default function AIAgriculturePage() {
         <section className="py-20 md:py-28 bg-[#F5F7F5]">
           <div className="max-w-6xl mx-auto px-6 md:px-8">
             <div className="reveal opacity-0 max-w-xl mx-auto text-center mb-14">
-              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-vibrant mb-3">
+              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-3">
                 Capabilities
               </span>
               <h2 className="text-[clamp(24px,3.5vw,36px)] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0D0D0D] mb-4">
@@ -343,7 +352,7 @@ export default function AIAgriculturePage() {
               </h2>
               <p className="text-[15px] text-[#6B7570] leading-relaxed">
                 Full-spectrum AI capabilities spanning data ingestion, model development, deployment,
-                and ongoing monitoring — built for the unique demands of agricultural environments.
+                and ongoing monitoring, built for the unique demands of agricultural environments.
               </p>
             </div>
 
@@ -351,9 +360,9 @@ export default function AIAgriculturePage() {
               {SERVICES_INCLUDE.map((item, i) => (
                 <div
                   key={item.title}
-                  className={`reveal opacity-0 bg-white border border-gray-200 rounded-2xl p-7 md:p-8 flex gap-5 hover:-translate-y-1 hover:shadow-lg hover:border-phyto-light transition-all duration-300 fade-in-${Math.min(i + 1, 4)}`}
+                  className={`reveal opacity-0 bg-white border border-gray-200 rounded-2xl p-7 md:p-8 flex flex-col items-center text-center gap-4 hover:-translate-y-1 hover:shadow-lg hover:border-phyto-light transition-all duration-300 fade-in-${Math.min(i + 1, 4)}`}
                 >
-                  <div className="w-12 h-12 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+                  <div className="w-12 h-12 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                     {item.icon}
                   </div>
                   <div>
@@ -374,14 +383,14 @@ export default function AIAgriculturePage() {
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-6xl mx-auto px-6 md:px-8">
             <div className="reveal opacity-0 max-w-xl mx-auto text-center mb-14">
-              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-vibrant mb-3">
+              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-3">
                 Partners &amp; Clients
               </span>
               <h2 className="text-[clamp(24px,3.5vw,36px)] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0D0D0D] mb-4">
                 Who We Work With
               </h2>
               <p className="text-[15px] text-[#6B7570] leading-relaxed">
-                From the farm gate to the boardroom — we partner with organisations at every stage of
+                From the farm gate to the boardroom, we partner with organisations at every stage of
                 the AI adoption journey.
               </p>
             </div>
@@ -390,9 +399,9 @@ export default function AIAgriculturePage() {
               {AUDIENCES.map((audience, i) => (
                 <div
                   key={audience.label}
-                  className={`reveal opacity-0 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-7 flex gap-5 hover:-translate-y-1 hover:shadow-md hover:border-phyto-pale transition-all duration-300 fade-in-${(i % 3) + 1}`}
+                  className={`reveal opacity-0 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-7 flex flex-col items-center text-center gap-4 hover:-translate-y-1 hover:shadow-md hover:border-phyto-pale transition-all duration-300 fade-in-${(i % 3) + 1}`}
                 >
-                  <div className="w-12 h-12 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-forest">
+                  <div className="w-12 h-12 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                     {audience.icon}
                   </div>
                   <div>
@@ -413,7 +422,7 @@ export default function AIAgriculturePage() {
         <section className="py-20 md:py-28 bg-[#F5F7F5]">
           <div className="max-w-6xl mx-auto px-6 md:px-8">
             <div className="reveal opacity-0 max-w-xl mx-auto text-center mb-14">
-              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-vibrant mb-3">
+              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-3">
                 Outputs
               </span>
               <h2 className="text-[clamp(24px,3.5vw,36px)] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0D0D0D] mb-4">
@@ -429,9 +438,9 @@ export default function AIAgriculturePage() {
               {DELIVERABLES.map((item, i) => (
                 <div
                   key={item.label}
-                  className={`reveal opacity-0 bg-white border border-gray-200 rounded-2xl p-7 flex gap-5 hover:-translate-y-1 hover:shadow-lg hover:border-phyto-light transition-all duration-300 fade-in-${(i % 3) + 1}`}
+                  className={`reveal opacity-0 bg-white border border-gray-200 rounded-2xl p-7 flex flex-col items-center text-center gap-4 hover:-translate-y-1 hover:shadow-lg hover:border-phyto-light transition-all duration-300 fade-in-${(i % 3) + 1}`}
                 >
-                  <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+                  <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                     {item.icon}
                   </div>
                   <div>
@@ -455,15 +464,15 @@ export default function AIAgriculturePage() {
               Get Started
             </span>
             <h2 className="text-[clamp(26px,4vw,40px)] font-extrabold leading-[1.18] tracking-[-0.02em] text-white mb-5">
-              Ready to put your data to work?
+              Ready to Put Your Data to Work?
             </h2>
             <p className="text-[17px] text-[#B8D8C8] max-w-[560px] mx-auto leading-relaxed mb-8">
-              Contact Phytosynth Bioscience Ltd today to discuss your AI and analytics needs — from
+              Contact Phytosynth Bioscience Ltd today to discuss your AI and analytics needs, from
               feasibility studies to full-scale model deployment.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
-                href="/#contact"
+                href="/contact"
                 className="inline-flex items-center justify-center bg-phyto-bright text-phyto-deep text-[15px] font-bold px-9 py-3.5 rounded-full hover:bg-white hover:-translate-y-px hover:shadow-lg transition-all duration-[280ms]"
               >
                 Contact Us

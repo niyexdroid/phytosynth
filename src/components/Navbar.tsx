@@ -3,16 +3,16 @@
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const NAV_LINKS = [
   { label: 'Home', href: '/' },
-  { label: 'About Us', href: '/#about' },
+  { label: 'About Us', href: '/about' },
   { label: 'Services', href: '/services' },
-  { label: 'Research', href: '/#research' },
-  { label: 'Training', href: '/#training' },
-  { label: 'Projects', href: '/#projects' },
-  { label: 'Insights', href: '/#insights' },
-  { label: 'Contact', href: '/#contact' },
+  { label: 'Research', href: '/research' },
+  { label: 'Training', href: '/training' },
+  { label: 'Impact', href: '/impact' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 export default function Navbar() {
@@ -31,24 +31,30 @@ export default function Navbar() {
   };
 
   return (
+    <>
     <nav className="fixed top-0 inset-x-0 z-50 h-[76px] bg-white/95 backdrop-blur-md border-b border-gray-100">
       <div className="max-w-8xl mx-auto px-6 md:px-8 h-full flex items-center justify-between gap-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5 shrink-0">
-          <svg width="34" height="34" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M24 6C24 6 8 10 8 26C8 34 14 42 24 44C34 42 40 34 40 26C40 10 24 6 24 6Z" fill="#2D6A4F" opacity="0.9"/>
-            <path d="M24 10C24 6 28 4 28 4C28 4 30 10 28 16C26 22 20 24 20 24" fill="#52B788" opacity="0.7"/>
-            <line x1="24" y1="14" x2="24" y2="42" stroke="#D8F3DC" strokeWidth="1.5" opacity="0.6"/>
-            <line x1="18" y1="18" x2="30" y2="16" stroke="#95D5B2" strokeWidth="1.2" opacity="0.7"/>
-            <line x1="16" y1="24" x2="32" y2="22" stroke="#95D5B2" strokeWidth="1.2" opacity="0.7"/>
-            <line x1="16" y1="30" x2="32" y2="28" stroke="#95D5B2" strokeWidth="1.2" opacity="0.7"/>
-            <line x1="18" y1="36" x2="30" y2="34" stroke="#95D5B2" strokeWidth="1.2" opacity="0.7"/>
-          </svg>
-          <span className="text-[15px] font-extrabold tracking-[0.04em] text-phyto-deep leading-tight">
-            PHYTOSYNTH<br />
-            <span className="text-[9px] font-semibold tracking-[0.18em] text-phyto-vibrant">BIOSCIENCE LTD</span>
-          </span>
+        <Link href="/" className="flex items-center shrink-0">
+          <Image
+            src="/logo.png"
+            alt="Phytosynth Bioscience"
+            width={2400}
+            height={771}
+            priority
+            className="h-14 md:h-16 w-auto"
+          />
         </Link>
+
+        {/* Tagline */}
+        <span className="hidden xl:block italic text-[12px] text-phyto-bright/70 whitespace-nowrap shrink-0">
+          Innovating Nature, Enhancing Life….
+        </span>
+
+        {/* Mobile motto, between logo and hamburger */}
+        <span className="lg:hidden flex-1 min-w-0 text-center px-2 italic text-[11px] leading-tight text-phyto-bright/70 truncate">
+          Innovating Nature, Enhancing Life….
+        </span>
 
         {/* Desktop nav links */}
         <ul className="hidden lg:flex items-center gap-1">
@@ -73,7 +79,7 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <Link
-          href="/#contact"
+          href="/contact"
           className="hidden lg:inline-flex items-center justify-center bg-phyto-forest text-white text-[14px] font-semibold px-7 py-3 rounded-full border-2 border-phyto-forest hover:bg-phyto-deep hover:border-phyto-deep hover:-translate-y-px hover:shadow-md transition-all duration-[280ms] shrink-0"
         >
           Get in Touch
@@ -90,10 +96,11 @@ export default function Navbar() {
           <span className={`block w-6 h-0.5 bg-phyto-deep rounded transition-all duration-200 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
         </button>
       </div>
+    </nav>
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="lg:hidden fixed top-[76px] inset-x-0 bottom-0 bg-white z-40 overflow-y-auto">
+        <div className="lg:hidden fixed top-[76px] inset-x-0 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-xl z-40 max-h-[calc(100dvh-76px)] overflow-y-auto">
           <div className="px-8 py-6 flex flex-col gap-1">
             {NAV_LINKS.map((link) => {
               const active = isActive(link.href);
@@ -104,8 +111,8 @@ export default function Navbar() {
                   onClick={() => setMenuOpen(false)}
                   className={`text-[17px] font-semibold py-3.5 border-b border-gray-100 transition-colors ${
                     active
-                      ? 'text-phyto-vibrant'
-                      : 'text-charcoal hover:text-phyto-vibrant'
+                      ? 'text-phyto-bright'
+                      : 'text-charcoal hover:text-phyto-bright'
                   }`}
                 >
                   {link.label}
@@ -113,7 +120,7 @@ export default function Navbar() {
               );
             })}
             <Link
-              href="/#contact"
+              href="/contact"
               onClick={() => setMenuOpen(false)}
               className="mt-4 w-full text-center bg-phyto-forest text-white text-[15px] font-semibold px-7 py-3.5 rounded-full hover:bg-phyto-deep transition-colors"
             >
@@ -122,6 +129,6 @@ export default function Navbar() {
           </div>
         </div>
       )}
-    </nav>
+    </>
   );
 }

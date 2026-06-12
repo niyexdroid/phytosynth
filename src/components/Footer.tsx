@@ -1,17 +1,18 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const QUICK_LINKS = [
   { label: 'Home', href: '/' },
-  { label: 'About Us', href: '/#about' },
+  { label: 'About Us', href: '/about' },
   { label: 'Services', href: '/services' },
-  { label: 'Research', href: '/#research' },
-  { label: 'Training', href: '/#training' },
-  { label: 'Insights', href: '/#insights' },
-  { label: 'Contact', href: '/#contact' },
+  { label: 'Research', href: '/research' },
+  { label: 'Training', href: '/training' },
+  { label: 'Impact', href: '/impact' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 const SERVICE_LINKS = [
-  { label: 'Agric-Tech', href: '/services/agric-tech' },
+  { label: 'Agri-Tech', href: '/services/agric-tech' },
   { label: 'AI in Agriculture', href: '/services/ai-in-agriculture' },
   { label: 'Plant Biotechnology', href: '/services/plant-biotechnology' },
   { label: 'Environmental Biosolutions', href: '/services/environmental-biosolutions' },
@@ -21,11 +22,11 @@ const SERVICE_LINKS = [
 ];
 
 const TRAINING_LINKS = [
-  { label: 'HPLC Training', href: '/#training' },
-  { label: 'GC-MS Training', href: '/#training' },
-  { label: 'Phytochemical Analysis', href: '/#training' },
-  { label: 'Molecular Techniques', href: '/#training' },
-  { label: 'Customized Training', href: '/#training' },
+  { label: 'AI Agriculture & Phenotyping', href: '/training' },
+  { label: 'Smart Greenhouse Analytics', href: '/training' },
+  { label: 'Precision Agriculture (Python)', href: '/training' },
+  { label: 'Molecular Biology & Diagnostics', href: '/training' },
+  { label: 'Laboratory Techniques', href: '/training' },
 ];
 
 const CONTACT_INFO = [
@@ -36,7 +37,7 @@ const CONTACT_INFO = [
         <circle cx="12" cy="10" r="3"/>
       </svg>
     ),
-    text: 'Innovation Hub, London,\nUnited Kingdom',
+    text: '50 Edale Road, Sneinton,\nNottingham, NG2 4HT, United Kingdom',
   },
   {
     icon: (
@@ -65,20 +66,14 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-[1.4fr_1fr_1.1fr_1fr_1.2fr] gap-10 lg:gap-8 xl:gap-10 pb-12 border-b border-white/8">
           {/* Brand */}
           <div className="reveal opacity-0 col-span-2 md:col-span-3 lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2.5 mb-4">
-              <svg width="34" height="34" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M24 6C24 6 8 10 8 26C8 34 14 42 24 44C34 42 40 34 40 26C40 10 24 6 24 6Z" fill="#2D6A4F" opacity="0.9"/>
-                <path d="M24 10C24 6 28 4 28 4C28 4 30 10 28 16C26 22 20 24 20 24" fill="#52B788" opacity="0.7"/>
-                <line x1="24" y1="14" x2="24" y2="42" stroke="#D8F3DC" strokeWidth="1.5" opacity="0.6"/>
-                <line x1="18" y1="18" x2="30" y2="16" stroke="#95D5B2" strokeWidth="1.2" opacity="0.7"/>
-                <line x1="16" y1="24" x2="32" y2="22" stroke="#95D5B2" strokeWidth="1.2" opacity="0.7"/>
-                <line x1="16" y1="30" x2="32" y2="28" stroke="#95D5B2" strokeWidth="1.2" opacity="0.7"/>
-                <line x1="18" y1="36" x2="30" y2="34" stroke="#95D5B2" strokeWidth="1.2" opacity="0.7"/>
-              </svg>
-              <span className="text-xl font-extrabold tracking-[0.04em] text-white leading-tight">
-                PHYTOSYNTH<br />
-                <span className="text-[11px] font-semibold tracking-[0.16em] text-phyto-bright">BIOSCIENCE LTD</span>
-              </span>
+            <Link href="/" className="inline-flex items-center mb-4">
+              <Image
+                src="/logo-light.png"
+                alt="Phytosynth Bioscience"
+                width={2400}
+                height={771}
+                className="h-16 md:h-20 w-auto"
+              />
             </Link>
             <p className="text-sm text-[#9DA5A2] leading-relaxed mb-5">
               Phytosynth Bioscience Ltd is a leading agritech and biotechnology company delivering
@@ -141,7 +136,7 @@ export default function Footer() {
             ))}
           </div>
 
-          {/* Contact Us — own column */}
+          {/* Contact Us, own column */}
           <div className="reveal opacity-0">
             <h4 className="text-[15px] font-bold text-white mb-5 tracking-[0.02em]">Contact Us</h4>
             {CONTACT_INFO.map((item, i) => (

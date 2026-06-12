@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Phytosynth Bioscience Ltd — Innovating for Sustainable Agriculture',
+  title: 'Phytosynth Bioscience Ltd, Innovating for Sustainable Agriculture',
   description:
     'Phytosynth Bioscience Ltd delivers science-driven solutions in plant biotechnology and environmental biosolutions to advance global food security and environmental sustainability.',
 };

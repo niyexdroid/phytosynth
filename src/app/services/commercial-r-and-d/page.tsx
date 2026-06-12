@@ -106,42 +106,42 @@ const SERVICES_INCLUDE = [
   {
     icon: IconHandshake,
     title: "Contract Research",
-    desc: "Full-service contract R&D programmes — from experimental design through execution and reporting — on your timeline and your IP terms. We serve as your external research arm, delivering rigorous science without the overhead of building internal capability.",
+    desc: "Full-service contract R&D programmes, from experimental design through execution and reporting, on your timeline and your IP terms. We serve as your external research arm, delivering rigorous science without the overhead of building internal capability.",
   },
   {
     icon: IconBeaker,
     title: "Product Development",
-    desc: "End-to-end product development for bioscience innovations — biostimulants, biopesticides, diagnostic kits, and specialty biochemicals — from proof-of-concept through prototype optimisation to pilot-scale production.",
+    desc: "End-to-end product development for bioscience innovations, biostimulants, biopesticides, diagnostic kits, and specialty biochemicals, from proof-of-concept through prototype optimisation to pilot-scale production.",
   },
   {
     icon: IconScale,
     title: "Scale-Up & Pilot Production",
-    desc: "Bridging the gap between bench and market. Our pilot facilities support fermentation scale-up (1–1000 L), downstream processing optimisation, formulation development, and stability testing — generating the data package you need for manufacturing partners.",
+    desc: "Bridging the gap between bench and market. Our pilot facilities support fermentation scale-up (1–1000 L), downstream processing optimisation, formulation development, and stability testing, generating the data package you need for manufacturing partners.",
   },
   {
     icon: IconClipboard,
     title: "Field Testing & Validation",
-    desc: "Multi-site, multi-season field trials designed to generate the efficacy, safety, and agronomic performance data required for product registration, investor due diligence, and customer adoption — across diverse agro-ecological zones.",
+    desc: "Multi-site, multi-season field trials designed to generate the efficacy, safety, and agronomic performance data required for product registration, investor due diligence, and customer adoption, across diverse agro-ecological zones.",
   },
   {
     icon: IconFileText,
     title: "Analytical & Quality Services",
-    desc: "Comprehensive analytical chemistry and microbiology services supporting product development and quality control — HPLC, GC-MS, LC-MS/MS, ICP-OES, microbial enumeration, and stability testing under ICH conditions.",
+    desc: "Comprehensive analytical chemistry and microbiology services supporting product development and quality control, HPLC, GC-MS, LC-MS/MS, ICP-OES, microbial enumeration, and stability testing under ICH conditions.",
   },
   {
     icon: IconBox,
     title: "Product Registration Support",
-    desc: "Compilation of registration dossiers for biopesticides, biofertilisers, biostimulants, and diagnostic products — including chemistry and manufacturing data, toxicology and ecotoxicology summaries, efficacy summaries, and environmental fate assessments.",
+    desc: "Compilation of registration dossiers for biopesticides, biofertilisers, biostimulants, and diagnostic products, including chemistry and manufacturing data, toxicology and ecotoxicology summaries, efficacy summaries, and environmental fate assessments.",
   },
   {
     icon: IconStar,
     title: "Co-Development Partnerships",
-    desc: "Shared-risk, shared-reward collaboration models where we co-invest scientific resources alongside your team — aligning incentives and accelerating timelines for innovations with significant market potential.",
+    desc: "Shared-risk, shared-reward collaboration models where we co-invest scientific resources alongside your team, aligning incentives and accelerating timelines for innovations with significant market potential.",
   },
   {
     icon: IconGlobe,
     title: "Technology Transfer & Licensing",
-    desc: "Structured technology transfer programmes that move innovations from our lab to your manufacturing site — with complete documentation, on-site training, and post-transfer support to ensure seamless adoption.",
+    desc: "Structured technology transfer programmes that move innovations from our lab to your manufacturing site, with complete documentation, on-site training, and post-transfer support to ensure seamless adoption.",
   },
 ];
 
@@ -174,7 +174,7 @@ const AUDIENCES = [
   {
     icon: IconHandshake,
     label: "University Spin-outs",
-    desc: "Academic founders commercialising lab-scale discoveries who need the translational R&D infrastructure — and the industry-experienced scientists — to bridge the valley of death between grant funding and commercial traction.",
+    desc: "Academic founders commercialising lab-scale discoveries who need the translational R&D infrastructure, and the industry-experienced scientists, to bridge the valley of death between grant funding and commercial traction.",
   },
 ];
 
@@ -182,17 +182,17 @@ const DELIVERABLES = [
   {
     icon: IconBeaker,
     label: "Research Reports & Data Packages",
-    desc: "Complete, traceable experimental records — raw data, analysed results, statistical interpretations, and conclusions — formatted for regulatory submission, investor review, or publication in peer-reviewed journals.",
+    desc: "Complete, traceable experimental records, raw data, analysed results, statistical interpretations, and conclusions, formatted for regulatory submission, investor review, or publication in peer-reviewed journals.",
   },
   {
     icon: IconBox,
     label: "Prototype Batches",
-    desc: "Physical product samples — from gram-scale lab prototypes through kilogram-scale pilot batches — with certificates of analysis, stability data, and formulation documentation.",
+    desc: "Physical product samples, from gram-scale lab prototypes through kilogram-scale pilot batches, with certificates of analysis, stability data, and formulation documentation.",
   },
   {
     icon: IconClipboard,
     label: "Technical Dossiers",
-    desc: "Regulatory-ready documentation packages compiled according to the specific requirements of your target jurisdictions — OECD, EPA, EFSA, or African regional frameworks.",
+    desc: "Regulatory-ready documentation packages compiled according to the specific requirements of your target jurisdictions, OECD, EPA, EFSA, or African regional frameworks.",
   },
   {
     icon: IconScale,
@@ -202,7 +202,7 @@ const DELIVERABLES = [
   {
     icon: IconStar,
     label: "IP & Commercialisation Reports",
-    desc: "Invention disclosures, patentability assessments, freedom-to-operate analyses, and commercialisation roadmaps — ensuring the products we develop together are protected and positioned for market success.",
+    desc: "Invention disclosures, patentability assessments, freedom-to-operate analyses, and commercialisation roadmaps, ensuring the products we develop together are protected and positioned for market success.",
   },
 ];
 
@@ -237,7 +237,7 @@ export default function CommercialRDPage() {
         {/* ═══════════════════════ BANNER ═══════════════════════ */}
         <section className="relative pt-[76px] h-[420px] md:h-[480px] flex items-center overflow-hidden">
           <Image
-            src="/hero-bg.png"
+            src="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=1600&q=80&fit=crop"
             alt="Commercial R&D laboratory and pilot facility"
             fill
             className="object-cover object-center"
@@ -252,6 +252,15 @@ export default function CommercialRDPage() {
                 "repeating-linear-gradient(0deg, transparent, transparent 2px, white 2px, white 4px), repeating-linear-gradient(90deg, transparent, transparent 2px, white 2px, white 4px)",
             }}
           />
+          <Link
+            href="/services"
+            className="absolute top-[90px] left-5 md:left-8 z-10 inline-flex items-center gap-1.5 text-white/85 hover:text-white text-[13px] font-semibold transition-colors"
+          >
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Back to All Services
+          </Link>
           <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-8 text-center">
             <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-4">
               Services
@@ -260,7 +269,7 @@ export default function CommercialRDPage() {
               Commercial R&amp;D Services
             </h1>
             <p className="text-[17px] text-[#B8D8C8] max-w-[680px] mx-auto leading-relaxed">
-              Your outsourced R&amp;D partner — from concept to commercial product. Contract research,
+              Your outsourced R&amp;D partner, from concept to commercial product. Contract research,
               product development, scale-up, and field validation under one roof, on your terms.
             </p>
           </div>
@@ -270,14 +279,14 @@ export default function CommercialRDPage() {
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-5xl mx-auto px-6 md:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             <div className="reveal opacity-0">
-              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-vibrant mb-3">
+              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-3">
                 Overview
               </span>
               <h2 className="text-[clamp(24px,3.5vw,36px)] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0D0D0D] mb-5">
-                Your R&amp;D engine, without the overhead
+                Your R&amp;D Engine, Without the Overhead
               </h2>
               <p className="text-[16px] text-[#5A6560] leading-relaxed mb-4">
-                Building and maintaining internal R&amp;D capability is expensive, slow, and risky —
+                Building and maintaining internal R&amp;D capability is expensive, slow, and risky,
                 especially in bioscience, where the capital requirements for laboratories, pilot
                 facilities, and field trial networks can stretch into the millions before a single
                 product reaches the market. Phytosynth Bioscience offers a different path.
@@ -285,20 +294,20 @@ export default function CommercialRDPage() {
               <p className="text-[16px] text-[#5A6560] leading-relaxed">
                 Our commercial R&amp;D services provide industry partners with access to world-class
                 scientific talent, fully equipped laboratories, pilot production facilities, and
-                multi-site field trial networks — on a contract basis that converts fixed costs into
+                multi-site field trial networks, on a contract basis that converts fixed costs into
                 variable costs and dramatically shortens time-to-market for new bioscience products.
               </p>
             </div>
 
             <div className="reveal opacity-0 grid gap-6">
-              <div className="flex gap-4 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
-                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+              <div className="flex flex-col items-center text-center gap-3 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
+                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                   {IconTarget}
                 </div>
                 <div>
                   <h4 className="text-[16px] font-bold text-[#0D0D0D] mb-1.5">Our Approach</h4>
                   <p className="text-[14px] text-[#6B7570] leading-relaxed">
-                    We operate as a seamless extension of your team — co-designing research programmes,
+                    We operate as a seamless extension of your team, co-designing research programmes,
                     sharing data in real time, and aligning our milestones with your commercial
                     objectives. Your IP stays yours. We are here to accelerate your pipeline, not
                     compete with it.
@@ -306,23 +315,23 @@ export default function CommercialRDPage() {
                 </div>
               </div>
 
-              <div className="flex gap-4 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
-                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+              <div className="flex flex-col items-center text-center gap-3 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
+                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                   {IconLeaf}
                 </div>
                 <div>
                   <h4 className="text-[16px] font-bold text-[#0D0D0D] mb-1.5">Full-Spectrum Capability</h4>
                   <p className="text-[14px] text-[#6B7570] leading-relaxed">
                     Unlike niche CROs that handle only one stage of development, we offer end-to-end
-                    capability — molecular biology, chemistry, formulation, scale-up, field testing, and
-                    regulatory dossier compilation — eliminating the friction and delays of
+                    capability, molecular biology, chemistry, formulation, scale-up, field testing, and
+                    regulatory dossier compilation, eliminating the friction and delays of
                     multi-vendor coordination.
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-4 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
-                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+              <div className="flex flex-col items-center text-center gap-3 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
+                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                   {IconUsers}
                 </div>
                 <div>
@@ -330,7 +339,7 @@ export default function CommercialRDPage() {
                   <p className="text-[14px] text-[#6B7570] leading-relaxed">
                     We work on a fee-for-service basis, through co-development partnerships with shared
                     risk and reward, or via multi-year strategic alliances with dedicated capacity.
-                    The model fits your budget, your timeline, and your risk appetite — not ours.
+                    The model fits your budget, your timeline, and your risk appetite, not ours.
                   </p>
                 </div>
               </div>
@@ -342,7 +351,7 @@ export default function CommercialRDPage() {
         <section className="py-20 md:py-28 bg-[#F5F7F5]">
           <div className="max-w-6xl mx-auto px-6 md:px-8">
             <div className="reveal opacity-0 max-w-xl mx-auto text-center mb-14">
-              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-vibrant mb-3">
+              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-3">
                 Capabilities
               </span>
               <h2 className="text-[clamp(24px,3.5vw,36px)] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0D0D0D] mb-4">
@@ -350,7 +359,7 @@ export default function CommercialRDPage() {
               </h2>
               <p className="text-[15px] text-[#6B7570] leading-relaxed">
                 A complete translational R&amp;D platform designed to take bioscience innovations from
-                concept to commercial readiness — faster, cheaper, and with less risk than building it yourself.
+                concept to commercial readiness, faster, cheaper, and with less risk than building it yourself.
               </p>
             </div>
 
@@ -358,9 +367,9 @@ export default function CommercialRDPage() {
               {SERVICES_INCLUDE.map((item, i) => (
                 <div
                   key={item.title}
-                  className={`reveal opacity-0 bg-white border border-gray-200 rounded-2xl p-7 md:p-8 flex gap-5 hover:-translate-y-1 hover:shadow-lg hover:border-phyto-light transition-all duration-300 fade-in-${Math.min(i + 1, 4)}`}
+                  className={`reveal opacity-0 bg-white border border-gray-200 rounded-2xl p-7 md:p-8 flex flex-col items-center text-center gap-4 hover:-translate-y-1 hover:shadow-lg hover:border-phyto-light transition-all duration-300 fade-in-${Math.min(i + 1, 4)}`}
                 >
-                  <div className="w-12 h-12 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+                  <div className="w-12 h-12 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                     {item.icon}
                   </div>
                   <div>
@@ -381,7 +390,7 @@ export default function CommercialRDPage() {
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-6xl mx-auto px-6 md:px-8">
             <div className="reveal opacity-0 max-w-xl mx-auto text-center mb-14">
-              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-vibrant mb-3">
+              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-3">
                 Partners &amp; Clients
               </span>
               <h2 className="text-[clamp(24px,3.5vw,36px)] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0D0D0D] mb-4">
@@ -389,7 +398,7 @@ export default function CommercialRDPage() {
               </h2>
               <p className="text-[15px] text-[#6B7570] leading-relaxed">
                 We partner with organisations that have big ideas and need the R&amp;D horsepower to
-                bring them to life — from multinationals refreshing their pipelines to founders
+                bring them to life, from multinationals refreshing their pipelines to founders
                 building their first product.
               </p>
             </div>
@@ -398,9 +407,9 @@ export default function CommercialRDPage() {
               {AUDIENCES.map((audience, i) => (
                 <div
                   key={audience.label}
-                  className={`reveal opacity-0 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-7 flex gap-5 hover:-translate-y-1 hover:shadow-md hover:border-phyto-pale transition-all duration-300 fade-in-${(i % 3) + 1}`}
+                  className={`reveal opacity-0 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-7 flex flex-col items-center text-center gap-4 hover:-translate-y-1 hover:shadow-md hover:border-phyto-pale transition-all duration-300 fade-in-${(i % 3) + 1}`}
                 >
-                  <div className="w-12 h-12 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-forest">
+                  <div className="w-12 h-12 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                     {audience.icon}
                   </div>
                   <div>
@@ -421,14 +430,14 @@ export default function CommercialRDPage() {
         <section className="py-20 md:py-28 bg-[#F5F7F5]">
           <div className="max-w-6xl mx-auto px-6 md:px-8">
             <div className="reveal opacity-0 max-w-xl mx-auto text-center mb-14">
-              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-vibrant mb-3">
+              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-3">
                 Outputs
               </span>
               <h2 className="text-[clamp(24px,3.5vw,36px)] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0D0D0D] mb-4">
                 Deliverables
               </h2>
               <p className="text-[15px] text-[#6B7570] leading-relaxed">
-                We do not deliver slide decks — we deliver data packages, prototype products, scale-up
+                We do not deliver slide decks, we deliver data packages, prototype products, scale-up
                 protocols, and regulatory dossiers ready for the next stage of commercialisation.
               </p>
             </div>
@@ -437,9 +446,9 @@ export default function CommercialRDPage() {
               {DELIVERABLES.map((item, i) => (
                 <div
                   key={item.label}
-                  className={`reveal opacity-0 bg-white border border-gray-200 rounded-2xl p-7 flex gap-5 hover:-translate-y-1 hover:shadow-lg hover:border-phyto-light transition-all duration-300 fade-in-${(i % 3) + 1}`}
+                  className={`reveal opacity-0 bg-white border border-gray-200 rounded-2xl p-7 flex flex-col items-center text-center gap-4 hover:-translate-y-1 hover:shadow-lg hover:border-phyto-light transition-all duration-300 fade-in-${(i % 3) + 1}`}
                 >
-                  <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+                  <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                     {item.icon}
                   </div>
                   <div>
@@ -463,15 +472,15 @@ export default function CommercialRDPage() {
               Get Started
             </span>
             <h2 className="text-[clamp(26px,4vw,40px)] font-extrabold leading-[1.18] tracking-[-0.02em] text-white mb-5">
-              Let us be your R&amp;D engine
+              Let Us Be Your R&amp;D Engine
             </h2>
             <p className="text-[17px] text-[#B8D8C8] max-w-[560px] mx-auto leading-relaxed mb-8">
-              Contact Phytosynth Bioscience Ltd to discuss your R&amp;D needs — from a single experiment
+              Contact Phytosynth Bioscience Ltd to discuss your R&amp;D needs, from a single experiment
               to a multi-year product development partnership.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
-                href="/#contact"
+                href="/contact"
                 className="inline-flex items-center justify-center bg-phyto-bright text-phyto-deep text-[15px] font-bold px-9 py-3.5 rounded-full hover:bg-white hover:-translate-y-px hover:shadow-lg transition-all duration-[280ms]"
               >
                 Contact Us

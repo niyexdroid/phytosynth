@@ -231,7 +231,7 @@ const SERVICES_INCLUDE = [
   {
     icon: IconSmartFarming,
     title: "Smart Farming Systems",
-    desc: "IoT-enabled farm management platforms that integrate real-time data from soil sensors, weather stations, and equipment telemetry into a unified command centre — giving you full visibility across every hectare, on any device.",
+    desc: "IoT-enabled farm management platforms that integrate real-time data from soil sensors, weather stations, and equipment telemetry into a unified command centre, giving you full visibility across every hectare, on any device.",
   },
   {
     icon: IconPrecisionAg,
@@ -241,7 +241,7 @@ const SERVICES_INCLUDE = [
   {
     icon: IconVerticalFarming,
     title: "Vertical Farming Support",
-    desc: "From LED spectrum tuning and nutrient-film-technique (NFT) optimisation to climate zone stratification — we help vertical farms achieve consistent cycle times, predictable yields, and energy-efficient operation at scale.",
+    desc: "From LED spectrum tuning and nutrient-film-technique (NFT) optimisation to climate zone stratification, we help vertical farms achieve consistent cycle times, predictable yields, and energy-efficient operation at scale.",
   },
   {
     icon: IconGreenhouse,
@@ -256,7 +256,7 @@ const SERVICES_INCLUDE = [
   {
     icon: IconCropAnalytics,
     title: "Crop Analytics",
-    desc: "Multispectral drone and satellite imagery processed through machine-learning pipelines to deliver stand counts, biomass estimates, chlorophyll indices, and yield forecasts — turning pixels into agronomic intelligence.",
+    desc: "Multispectral drone and satellite imagery processed through machine-learning pipelines to deliver stand counts, biomass estimates, chlorophyll indices, and yield forecasts, turning pixels into agronomic intelligence.",
   },
   {
     icon: IconSensorIntegration,
@@ -266,7 +266,7 @@ const SERVICES_INCLUDE = [
   {
     icon: IconDataDriven,
     title: "Data-Driven Crop Management",
-    desc: "Decision-support systems that combine historical performance, real-time environmental data, and predictive models to generate prescriptive recommendations — irrigation timing, nutrient adjustments, and harvest windows backed by evidence.",
+    desc: "Decision-support systems that combine historical performance, real-time environmental data, and predictive models to generate prescriptive recommendations, irrigation timing, nutrient adjustments, and harvest windows backed by evidence.",
   },
 ];
 
@@ -289,7 +289,7 @@ const AUDIENCES = [
   {
     icon: IconStartup,
     label: "Agritech Startups",
-    desc: "Early-stage ventures building next-generation tools — we provide the domain expertise, trial networks, and validation frameworks to bring products to market.",
+    desc: "Early-stage ventures building next-generation tools, we provide the domain expertise, trial networks, and validation frameworks to bring products to market.",
   },
   {
     icon: IconUniversity,
@@ -307,7 +307,7 @@ const DELIVERABLES = [
   {
     icon: IconReport,
     label: "Technical Reports",
-    desc: "Comprehensive documents covering trial methodology, statistical analysis, key findings, and actionable recommendations — written to be shared with stakeholders, funders, or regulators.",
+    desc: "Comprehensive documents covering trial methodology, statistical analysis, key findings, and actionable recommendations, written to be shared with stakeholders, funders, or regulators.",
   },
   {
     icon: IconDashboard,
@@ -327,7 +327,7 @@ const DELIVERABLES = [
   {
     icon: IconOptimisation,
     label: "Optimisation Recommendations",
-    desc: "Prioritised, costed action plans that identify the highest-impact interventions for resource efficiency, input reduction, and sustainability gains — backed by the data we collect together.",
+    desc: "Prioritised, costed action plans that identify the highest-impact interventions for resource efficiency, input reduction, and sustainability gains, backed by the data we collect together.",
   },
 ];
 
@@ -362,7 +362,7 @@ export default function AgricTechPage() {
         {/* ═══════════════════════ BANNER ═══════════════════════ */}
         <section className="relative pt-[76px] h-[420px] md:h-[480px] flex items-center overflow-hidden">
           <Image
-            src="/hero-bg.png"
+            src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=1600&q=80&fit=crop"
             alt="Smart greenhouse and agricultural technology"
             fill
             className="object-cover object-center"
@@ -377,12 +377,21 @@ export default function AgricTechPage() {
                 "repeating-linear-gradient(0deg, transparent, transparent 2px, white 2px, white 4px), repeating-linear-gradient(90deg, transparent, transparent 2px, white 2px, white 4px)",
             }}
           />
+          <Link
+            href="/services"
+            className="absolute top-[90px] left-5 md:left-8 z-10 inline-flex items-center gap-1.5 text-white/85 hover:text-white text-[13px] font-semibold transition-colors"
+          >
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Back to All Services
+          </Link>
           <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-8 text-center">
             <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-4">
               Services
             </span>
             <h1 className="text-[clamp(30px,5vw,52px)] font-extrabold leading-[1.15] tracking-[-0.02em] text-white mb-5">
-              Agric-Tech Solutions
+              Agri-Tech Solutions
             </h1>
             <p className="text-[17px] text-[#B8D8C8] max-w-[680px] mx-auto leading-relaxed">
               Advanced agricultural technologies supporting sustainable crop production,
@@ -396,14 +405,14 @@ export default function AgricTechPage() {
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-5xl mx-auto px-6 md:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             <div className="reveal opacity-0">
-              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-vibrant mb-3">
+              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-3">
                 Overview
               </span>
               <h2 className="text-[clamp(24px,3.5vw,36px)] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0D0D0D] mb-5">
-                Science-driven agriculture for a changing world
+                Science-Driven Agriculture for a Changing World
               </h2>
               <p className="text-[16px] text-[#5A6560] leading-relaxed mb-4">
-                Phytosynth Bioscience provides innovative agric-tech solutions designed to improve
+                Phytosynth Bioscience provides innovative agri-tech solutions designed to improve
                 productivity, sustainability, and decision-making in modern agriculture. We combine
                 sensor technologies, crop analytics, environmental monitoring, and
                 controlled-environment agriculture to help growers, researchers, and organisations
@@ -412,49 +421,49 @@ export default function AgricTechPage() {
               <p className="text-[16px] text-[#5A6560] leading-relaxed">
                 Whether you are managing 500 hectares of open-field row crops or a single high-density
                 vertical farm, our team bridges the gap between cutting-edge research and practical,
-                deployable technology — delivering measurable improvements in yield, resource
+                deployable technology, delivering measurable improvements in yield, resource
                 efficiency, and operational resilience.
               </p>
             </div>
 
             <div className="reveal opacity-0 grid gap-6">
               {/* Approach highlight cards */}
-              <div className="flex gap-4 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
-                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+              <div className="flex flex-col items-center text-center gap-3 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
+                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                   {IconTarget}
                 </div>
                 <div>
                   <h4 className="text-[16px] font-bold text-[#0D0D0D] mb-1.5">Our Approach</h4>
                   <p className="text-[14px] text-[#6B7570] leading-relaxed">
-                    We begin with a comprehensive diagnostic of your current operation — mapping
-                    existing infrastructure, data flows, and agronomic practices — before recommending
+                    We begin with a comprehensive diagnostic of your current operation, mapping
+                    existing infrastructure, data flows, and agronomic practices, before recommending
                     any technology. Every solution is tailored, never templated.
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-4 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
-                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+              <div className="flex flex-col items-center text-center gap-3 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
+                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                   {IconLeaf}
                 </div>
                 <div>
                   <h4 className="text-[16px] font-bold text-[#0D0D0D] mb-1.5">Sustainability First</h4>
                   <p className="text-[14px] text-[#6B7570] leading-relaxed">
-                    Every engagement is measured against environmental outcomes — reduced water
+                    Every engagement is measured against environmental outcomes, reduced water
                     consumption, lower chemical inputs, healthier soils, and smaller carbon
                     footprints. Technology serves the ecosystem, not the other way around.
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-4 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
-                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+              <div className="flex flex-col items-center text-center gap-3 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-6">
+                <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                   {IconUsers}
                 </div>
                 <div>
                   <h4 className="text-[16px] font-bold text-[#0D0D0D] mb-1.5">Collaborative Delivery</h4>
                   <p className="text-[14px] text-[#6B7570] leading-relaxed">
-                    We work alongside your team — agronomists, farm managers, IT staff — embedding
+                    We work alongside your team, agronomists, farm managers, IT staff, embedding
                     knowledge and building internal capability so you are self-sufficient long after
                     the engagement ends.
                   </p>
@@ -468,14 +477,14 @@ export default function AgricTechPage() {
         <section className="py-20 md:py-28 bg-[#F5F7F5]">
           <div className="max-w-6xl mx-auto px-6 md:px-8">
             <div className="reveal opacity-0 max-w-xl mx-auto text-center mb-14">
-              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-vibrant mb-3">
+              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-3">
                 Capabilities
               </span>
               <h2 className="text-[clamp(24px,3.5vw,36px)] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0D0D0D] mb-4">
                 Services Include
               </h2>
               <p className="text-[15px] text-[#6B7570] leading-relaxed">
-                End-to-end solutions spanning hardware, software, and agronomic science — designed to
+                End-to-end solutions spanning hardware, software, and agronomic science, designed to
                 work together as a stack or deployed individually where you need them most.
               </p>
             </div>
@@ -484,9 +493,9 @@ export default function AgricTechPage() {
               {SERVICES_INCLUDE.map((item, i) => (
                 <div
                   key={item.title}
-                  className={`reveal opacity-0 bg-white border border-gray-200 rounded-2xl p-7 md:p-8 flex gap-5 hover:-translate-y-1 hover:shadow-lg hover:border-phyto-light transition-all duration-300 fade-in-${Math.min(i + 1, 4)}`}
+                  className={`reveal opacity-0 bg-white border border-gray-200 rounded-2xl p-7 md:p-8 flex flex-col items-center text-center gap-4 hover:-translate-y-1 hover:shadow-lg hover:border-phyto-light transition-all duration-300 fade-in-${Math.min(i + 1, 4)}`}
                 >
-                  <div className="w-12 h-12 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+                  <div className="w-12 h-12 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                     {item.icon}
                   </div>
                   <div>
@@ -507,14 +516,14 @@ export default function AgricTechPage() {
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-6xl mx-auto px-6 md:px-8">
             <div className="reveal opacity-0 max-w-xl mx-auto text-center mb-14">
-              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-vibrant mb-3">
+              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-3">
                 Partners &amp; Clients
               </span>
               <h2 className="text-[clamp(24px,3.5vw,36px)] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0D0D0D] mb-4">
                 Who We Work With
               </h2>
               <p className="text-[15px] text-[#6B7570] leading-relaxed">
-                We serve every link in the agricultural value chain — from the farmer in the field to
+                We serve every link in the agricultural value chain, from the farmer in the field to
                 the policymaker in the capital.
               </p>
             </div>
@@ -523,9 +532,9 @@ export default function AgricTechPage() {
               {AUDIENCES.map((audience, i) => (
                 <div
                   key={audience.label}
-                  className={`reveal opacity-0 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-7 flex gap-5 hover:-translate-y-1 hover:shadow-md hover:border-phyto-pale transition-all duration-300 fade-in-${(i % 3) + 1}`}
+                  className={`reveal opacity-0 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-7 flex flex-col items-center text-center gap-4 hover:-translate-y-1 hover:shadow-md hover:border-phyto-pale transition-all duration-300 fade-in-${(i % 3) + 1}`}
                 >
-                  <div className="w-12 h-12 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-forest">
+                  <div className="w-12 h-12 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                     {audience.icon}
                   </div>
                   <div>
@@ -546,14 +555,14 @@ export default function AgricTechPage() {
         <section className="py-20 md:py-28 bg-[#F5F7F5]">
           <div className="max-w-6xl mx-auto px-6 md:px-8">
             <div className="reveal opacity-0 max-w-xl mx-auto text-center mb-14">
-              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-vibrant mb-3">
+              <span className="inline-block text-[13px] font-bold tracking-[0.12em] uppercase text-phyto-bright mb-3">
                 Outputs
               </span>
               <h2 className="text-[clamp(24px,3.5vw,36px)] font-extrabold leading-[1.2] tracking-[-0.02em] text-[#0D0D0D] mb-4">
                 Deliverables
               </h2>
               <p className="text-[15px] text-[#6B7570] leading-relaxed">
-                Every engagement produces tangible, actionable outputs — not slide decks that gather
+                Every engagement produces tangible, actionable outputs, not slide decks that gather
                 dust. Here is what you can expect on the table at the end of a project.
               </p>
             </div>
@@ -562,9 +571,9 @@ export default function AgricTechPage() {
               {DELIVERABLES.map((item, i) => (
                 <div
                   key={item.label}
-                  className={`reveal opacity-0 bg-white border border-gray-200 rounded-2xl p-7 flex gap-5 hover:-translate-y-1 hover:shadow-lg hover:border-phyto-light transition-all duration-300 fade-in-${(i % 3) + 1}`}
+                  className={`reveal opacity-0 bg-white border border-gray-200 rounded-2xl p-7 flex flex-col items-center text-center gap-4 hover:-translate-y-1 hover:shadow-lg hover:border-phyto-light transition-all duration-300 fade-in-${(i % 3) + 1}`}
                 >
-                  <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-pale text-phyto-leaf">
+                  <div className="w-11 h-11 shrink-0 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
                     {item.icon}
                   </div>
                   <div>
@@ -588,7 +597,7 @@ export default function AgricTechPage() {
               Get Started
             </span>
             <h2 className="text-[clamp(26px,4vw,40px)] font-extrabold leading-[1.18] tracking-[-0.02em] text-white mb-5">
-              Ready to transform your agricultural operations?
+              Ready to Transform Your Agricultural Operations?
             </h2>
             <p className="text-[17px] text-[#B8D8C8] max-w-[560px] mx-auto leading-relaxed mb-8">
               Contact Phytosynth Bioscience Ltd today to discuss consultancy, training, research
@@ -596,7 +605,7 @@ export default function AgricTechPage() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
-                href="/#contact"
+                href="/contact"
                 className="inline-flex items-center justify-center bg-phyto-bright text-phyto-deep text-[15px] font-bold px-9 py-3.5 rounded-full hover:bg-white hover:-translate-y-px hover:shadow-lg transition-all duration-[280ms]"
               >
                 Contact Us
