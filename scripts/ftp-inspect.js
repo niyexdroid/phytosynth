@@ -1,18 +1,32 @@
-// Read-only FTP inspector — lists the remote tree so we can find the real
-// web root. Does NOT upload or delete anything.
+// Read-only FTP inspector — recursively walks the accessible tree to locate
+// the REAL document root (the one containing the live "_next" folder).
 const ftp = require("basic-ftp");
 
-async function list(client, dir) {
+const HITS = [];
+
+async function walk(client, dir, depth) {
+  if (depth > 4) return;
+  let entries;
   try {
-    const entries = await client.list(dir);
-    console.log(`\n=== ${dir} (${entries.length} entries) ===`);
-    for (const e of entries) {
-      console.log(`  ${e.isDirectory ? "[d]" : "   "} ${e.name}  (${e.size}b)`);
-    }
-    return entries;
+    entries = await client.list(dir);
   } catch (err) {
-    console.log(`\n=== ${dir} === ERROR: ${err.message}`);
-    return [];
+    console.log(`  (cannot list ${dir}: ${err.message})`);
+    return;
+  }
+  for (const e of entries) {
+    const full = dir === "/" ? `/${e.name}` : `${dir}/${e.name}`;
+    if (e.isDirectory) {
+      // Flag anything interesting: the live _next folder, or a docroot.
+      if (e.name === "_next" || e.name === "next" || e.name === "public_html") {
+        console.log(`  >>> ${full}  (${e.name})`);
+        if (e.name === "_next" || e.name === "next") HITS.push(full);
+      } else {
+        console.log(`  [d] ${full}`);
+      }
+      await walk(client, full, depth + 1);
+    } else if (e.name === "index.html" || e.name.endsWith(".htaccess")) {
+      console.log(`      ${full}  (${e.size}b)`);
+    }
   }
 }
 
@@ -27,19 +41,10 @@ async function main() {
       secure: false,
     });
     console.log(`FTP login directory: ${await client.pwd()}`);
-    await list(client, "/");
-    await list(client, "/public_html");
-
-    // Decisive test: upload a uniquely-named marker (never requested => never
-    // cached) to public_html. If it's reachable over HTTP, public_html is the
-    // real docroot and our problem is just stale cache.
-    const marker = `deploycheck-${Date.now()}.txt`;
-    const { Readable } = require("stream");
-    await client.uploadFrom(
-      Readable.from([`ok ${marker}`]),
-      `public_html/${marker}`,
-    );
-    console.log(`\nMARKER UPLOADED: https://phytosynth.co.uk/${marker}`);
+    console.log("=== full tree (dirs, index.html, .htaccess) ===");
+    await walk(client, "/", 0);
+    console.log("\n=== _next / next folders found ===");
+    console.log(HITS.length ? HITS.join("\n") : "NONE — real docroot is NOT reachable from this FTP account.");
   } catch (err) {
     console.error("Inspect failed:", err.message);
     process.exit(1);
