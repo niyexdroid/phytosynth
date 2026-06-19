@@ -28,14 +28,33 @@ jobs:
       - name: List build output for debugging
         run: ls -la out/ && echo "---next folder---" && ls out/next/ 2>/dev/null || echo "No next/ folder"
 
-      - name: Deploy via lftp
+      - name: Deploy via basic-ftp
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq lftp
-          lftp -e "
-            set ftp:ssl-allow no;
-            set ssl:verify-certificate no;
-            open ${{ secrets.NAMECHEAP_FTP_HOST }};
-            user ${{ secrets.NAMECHEAP_FTP_USER }} ${{ secrets.NAMECHEAP_FTP_PASS }};
-            mirror --reverse --delete --verbose=3 --parallel=5 ./out/ ./public_html/;
-            quit;
+          cat > deploy-ftp.js << 'SCRIPT'
+          const ftp = require("basic-ftp");
+          async function deploy() {
+            const client = new ftp.Client();
+            try {
+              await client.access({
+                host: process.env.FTP_HOST,
+                user: process.env.FTP_USER,
+                password: process.env.FTP_PASS,
+                secure: false,
+              });
+              console.log("Connected. Uploading...");
+              await client.uploadFromDir("./out", "public_html");
+              console.log("Deploy complete!");
+            } catch (err) {
+              console.error("Deploy failed:", err);
+              process.exit(1);
+            }
+            client.close();
+          }
+          deploy();
+          SCRIPT
+          node deploy-ftp.js
+        env:
+          FTP_HOST: ${{ secrets.NAMECHEAP_FTP_HOST }}
+          FTP_USER: ${{ secrets.NAMECHEAP_FTP_USER }}
+          FTP_PASS: ${{ secrets.NAMECHEAP_FTP_PASS }}
           "

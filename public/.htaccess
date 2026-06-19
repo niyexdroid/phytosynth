@@ -1,3 +1,5 @@
+DirectoryIndex index.html
+
 RewriteEngine On
 
 # Fix for LiteSpeed/Namecheap: internally rewrite _next to next
