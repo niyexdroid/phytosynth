@@ -5,12 +5,13 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const NAV_LINKS = [
+const NAV_LINKS: { label: string; href: string; highlight?: boolean }[] = [
   { label: 'Home', href: '/' },
   { label: 'About Us', href: '/about' },
   { label: 'Services', href: '/services' },
   { label: 'Research', href: '/research' },
   { label: 'Training', href: '/training' },
+  { label: 'Inclusive Programme', href: '/inclusive-programme', highlight: true },
   { label: 'Impact', href: '/impact' },
   { label: 'Contact', href: '/contact' },
 ];
@@ -47,13 +48,13 @@ export default function Navbar() {
         </Link>
 
         {/* Tagline */}
-        <span className="hidden xl:block italic text-[12px] text-phyto-bright/70 whitespace-nowrap shrink-0">
-          Innovating Nature, Enhancing Life….
+        <span className="hidden xl:block italic text-[12px] leading-tight text-center text-phyto-bright/70 shrink-0">
+          Innovating Nature,<br />Enhancing Life….
         </span>
 
         {/* Mobile motto, between logo and hamburger */}
-        <span className="lg:hidden flex-1 min-w-0 text-center px-2 italic text-[11px] leading-tight text-phyto-bright/70 truncate">
-          Innovating Nature, Enhancing Life….
+        <span className="lg:hidden flex-1 min-w-0 text-center px-2 italic text-[11px] leading-tight text-phyto-bright/70">
+          Innovating Nature,<br />Enhancing Life….
         </span>
 
         {/* Desktop nav links */}
@@ -64,10 +65,12 @@ export default function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`text-[13.5px] font-medium px-3.5 py-2 rounded-full transition-colors duration-[180ms] ${
+                  className={`text-[13.5px] px-3.5 py-2 rounded-full transition-colors duration-[180ms] ${
                     active
                       ? 'text-phyto-deep bg-phyto-pale/80 font-semibold'
-                      : 'text-gray-600 hover:text-phyto-deep hover:bg-phyto-pale/60'
+                      : link.highlight
+                        ? 'text-phyto-forest font-semibold hover:text-phyto-deep hover:bg-phyto-pale/60'
+                        : 'text-gray-600 font-medium hover:text-phyto-deep hover:bg-phyto-pale/60'
                   }`}
                 >
                   {link.label}
@@ -112,7 +115,9 @@ export default function Navbar() {
                   className={`text-[17px] font-semibold py-3.5 border-b border-gray-100 transition-colors ${
                     active
                       ? 'text-phyto-bright'
-                      : 'text-charcoal hover:text-phyto-bright'
+                      : link.highlight
+                        ? 'text-phyto-forest hover:text-phyto-vibrant'
+                        : 'text-charcoal hover:text-phyto-bright'
                   }`}
                 >
                   {link.label}
