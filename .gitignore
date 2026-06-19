@@ -3,3 +3,4 @@ node_modules
 .deepseek
 .env
 out/
+deploy.zip
