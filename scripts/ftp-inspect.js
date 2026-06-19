@@ -29,8 +29,17 @@ async function main() {
     console.log(`FTP login directory: ${await client.pwd()}`);
     await list(client, "/");
     await list(client, "/public_html");
-    await list(client, "/_next");
-    await list(client, "/next");
+
+    // Decisive test: upload a uniquely-named marker (never requested => never
+    // cached) to public_html. If it's reachable over HTTP, public_html is the
+    // real docroot and our problem is just stale cache.
+    const marker = `deploycheck-${Date.now()}.txt`;
+    const { Readable } = require("stream");
+    await client.uploadFrom(
+      Readable.from([`ok ${marker}`]),
+      `public_html/${marker}`,
+    );
+    console.log(`\nMARKER UPLOADED: https://phytosynth.co.uk/${marker}`);
   } catch (err) {
     console.error("Inspect failed:", err.message);
     process.exit(1);
