@@ -1,5 +1,8 @@
 RewriteEngine On
 
+# Fix for LiteSpeed/Namecheap: internally rewrite _next to next
+RewriteRule ^_next/(.*)$ /next/$1 [L]
+
 # Redirect www to non-www
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
@@ -7,11 +10,6 @@ RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 # Force HTTPS
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
-
-# Serve .html files without extension
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([^.]+)$ $1.html [L]
 
 # Serve .html files without extension
 RewriteCond %{REQUEST_FILENAME} !-f
