@@ -28,33 +28,9 @@ jobs:
       - name: List build output for debugging
         run: ls -la out/ && echo "---next folder---" && ls out/next/ 2>/dev/null || echo "No next/ folder"
 
-      - name: Deploy via basic-ftp
-        run: |
-          cat > deploy-ftp.js << 'SCRIPT'
-          const ftp = require("basic-ftp");
-          async function deploy() {
-            const client = new ftp.Client();
-            try {
-              await client.access({
-                host: process.env.FTP_HOST,
-                user: process.env.FTP_USER,
-                password: process.env.FTP_PASS,
-                secure: false,
-              });
-              console.log("Connected. Uploading...");
-              await client.uploadFromDir("./out", "public_html");
-              console.log("Deploy complete!");
-            } catch (err) {
-              console.error("Deploy failed:", err);
-              process.exit(1);
-            }
-            client.close();
-          }
-          deploy();
-          SCRIPT
-          node deploy-ftp.js
+      - name: Deploy via FTP
+        run: node scripts/deploy.js
         env:
           FTP_HOST: ${{ secrets.NAMECHEAP_FTP_HOST }}
           FTP_USER: ${{ secrets.NAMECHEAP_FTP_USER }}
           FTP_PASS: ${{ secrets.NAMECHEAP_FTP_PASS }}
-          "

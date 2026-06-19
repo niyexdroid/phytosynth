@@ -32,9 +32,19 @@ if (!fs.existsSync(path.join(outDir, "next"))) {
   process.exit(1);
 }
 
+// Where the site's web root lives, relative to the FTP login directory.
+// Override with FTP_REMOTE_DIR if your FTP account already lands inside the
+// web root (in that case set FTP_REMOTE_DIR=. to avoid a nested folder).
+const REMOTE_DIR = process.env.FTP_REMOTE_DIR || "public_html";
+
 async function deploy() {
   const client = new ftp.Client();
   client.ftp.verbose = true;
+
+  let uploaded = 0;
+  client.trackProgress((info) => {
+    if (info.type === "upload") uploaded++;
+  });
 
   try {
     console.log(`📤 Connecting to ${FTP_HOST}...`);
@@ -45,11 +55,20 @@ async function deploy() {
       secure: false,
     });
 
-    console.log("📤 Uploading out/ → public_html/ ...");
-    await client.uploadFromDir(outDir, "public_html");
-    console.log("✅ Deploy complete! Refresh phytosynth.co.uk");
+    console.log(`📂 FTP login directory: ${await client.pwd()}`);
+    console.log(`📤 Uploading out/ → ${REMOTE_DIR}/ ...`);
+    await client.uploadFromDir(outDir, REMOTE_DIR);
+
+    // Sanity check: confirm index.html actually landed in the remote dir.
+    const size = await client.size(`${REMOTE_DIR}/index.html`);
+    console.log(`✅ Deploy complete — ${uploaded} files uploaded.`);
+    console.log(`✅ Verified ${REMOTE_DIR}/index.html on server (${size} bytes).`);
+    console.log("   Refresh phytosynth.co.uk (hard-reload: Ctrl+F5).");
   } catch (err) {
-    console.error("❌ Deploy failed:", err.message);
+    console.error("❌ Deploy FAILED:", err.message);
+    console.error(`   Files uploaded before failure: ${uploaded}`);
+    client.close();
+    process.exit(1); // fail loudly so a broken deploy can't look like success
   } finally {
     client.close();
   }
