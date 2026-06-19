@@ -25,12 +25,17 @@ jobs:
       - name: Build site
         run: npm run build
 
-      - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.NAMECHEAP_FTP_HOST }}
-          username: ${{ secrets.NAMECHEAP_FTP_USER }}
-          password: ${{ secrets.NAMECHEAP_FTP_PASS }}
-          local-dir: ./out/
-          server-dir: public_html/
-          dangerous-clean-slate: true
+      - name: List build output for debugging
+        run: ls -la out/ && echo "---next folder---" && ls out/next/ 2>/dev/null || echo "No next/ folder"
+
+      - name: Deploy via lftp
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+          lftp -e "
+            set ftp:ssl-allow no;
+            set ssl:verify-certificate no;
+            open ${{ secrets.NAMECHEAP_FTP_HOST }};
+            user ${{ secrets.NAMECHEAP_FTP_USER }} ${{ secrets.NAMECHEAP_FTP_PASS }};
+            mirror --reverse --delete --verbose=3 --parallel=5 ./out/ ./public_html/;
+            quit;
+          "
