@@ -92,6 +92,19 @@ html:not([data-reveal="ready"]) .reveal {
   }
 }
 
+/* Hamburger → X animation, driven by the CSS-only #nav-toggle checkbox so it
+   works without React hydration. The bars live inside <nav> (descendants of
+   the toggle, not siblings) so Tailwind's `peer` variant can't reach them. */
+#nav-toggle:checked ~ nav .nav-bar-1 {
+  transform: translateY(8px) rotate(45deg);
+}
+#nav-toggle:checked ~ nav .nav-bar-2 {
+  opacity: 0;
+}
+#nav-toggle:checked ~ nav .nav-bar-3 {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
 /* Staggered fade-in delays */
 .fade-in-1 {
   animation-delay: 0ms;

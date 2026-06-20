@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -16,8 +15,15 @@ const NAV_LINKS: { label: string; href: string; highlight?: boolean }[] = [
   { label: 'Contact', href: '/contact' },
 ];
 
+// Close the menu by un-checking the CSS toggle. Only runs when React has
+// hydrated; without JS, every link is a full page load which resets the
+// checkbox on its own, so the menu is never left stuck open.
+function closeMenu() {
+  const cb = document.getElementById('nav-toggle') as HTMLInputElement | null;
+  if (cb) cb.checked = false;
+}
+
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
 
   const isActive = (href: string) => {
@@ -33,6 +39,10 @@ export default function Navbar() {
 
   return (
     <>
+    {/* CSS-only menu toggle. Drives the mobile menu via the `peer` checked
+        state so it works even if the React bundle never hydrates. */}
+    <input id="nav-toggle" type="checkbox" className="peer sr-only" aria-label="Toggle menu" />
+
     <nav className="fixed top-0 inset-x-0 z-50 h-[76px] bg-white/95 backdrop-blur-md border-b border-gray-100">
       <div className="max-w-8xl mx-auto px-6 md:px-8 h-full flex items-center justify-between gap-4">
         {/* Logo */}
@@ -88,52 +98,58 @@ export default function Navbar() {
           Get in Touch
         </Link>
 
-        {/* Hamburger */}
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="lg:hidden flex flex-col gap-1.5 p-2"
+        {/* Hamburger — a label tied to the #nav-toggle checkbox, so it toggles
+            the menu with pure CSS (no JS required). */}
+        <label
+          htmlFor="nav-toggle"
+          className="lg:hidden flex flex-col gap-1.5 p-2 cursor-pointer"
           aria-label="Toggle menu"
         >
-          <span className={`block w-6 h-0.5 bg-phyto-deep rounded transition-all duration-200 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-          <span className={`block w-6 h-0.5 bg-phyto-deep rounded transition-all duration-200 ${menuOpen ? 'opacity-0' : ''}`} />
-          <span className={`block w-6 h-0.5 bg-phyto-deep rounded transition-all duration-200 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
-        </button>
+          <span className="nav-bar nav-bar-1 block w-6 h-0.5 bg-phyto-deep rounded transition-all duration-200" />
+          <span className="nav-bar nav-bar-2 block w-6 h-0.5 bg-phyto-deep rounded transition-all duration-200" />
+          <span className="nav-bar nav-bar-3 block w-6 h-0.5 bg-phyto-deep rounded transition-all duration-200" />
+        </label>
       </div>
     </nav>
 
-      {/* Mobile menu */}
-      {menuOpen && (
-        <div className="lg:hidden fixed top-[76px] inset-x-0 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-xl z-40 max-h-[calc(100dvh-76px)] overflow-y-auto">
-          <div className="px-8 py-6 flex flex-col gap-1">
-            {NAV_LINKS.map((link) => {
-              const active = isActive(link.href);
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMenuOpen(false)}
-                  className={`text-[17px] font-semibold py-3.5 border-b border-gray-100 transition-colors ${
-                    active
-                      ? 'text-phyto-bright'
-                      : link.highlight
-                        ? 'text-phyto-forest hover:text-phyto-vibrant'
-                        : 'text-charcoal hover:text-phyto-bright'
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              );
-            })}
+    {/* Backdrop — tapping outside closes the menu (label toggles the checkbox). */}
+    <label
+      htmlFor="nav-toggle"
+      aria-hidden="true"
+      className="hidden max-lg:peer-checked:block fixed inset-0 top-[76px] z-30 bg-black/20"
+    />
+
+    {/* Mobile menu — shown via the peer checkbox below the lg breakpoint. */}
+    <div className="hidden max-lg:peer-checked:flex flex-col fixed top-[76px] inset-x-0 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-xl z-40 max-h-[calc(100dvh-76px)] overflow-y-auto">
+      <div className="px-8 py-6 flex flex-col gap-1">
+        {NAV_LINKS.map((link) => {
+          const active = isActive(link.href);
+          return (
             <Link
-              href="/contact"
-              onClick={() => setMenuOpen(false)}
-              className="mt-4 w-full text-center bg-phyto-forest text-white text-[15px] font-semibold px-7 py-3.5 rounded-full hover:bg-phyto-deep transition-colors"
+              key={link.href}
+              href={link.href}
+              onClick={closeMenu}
+              className={`text-[17px] font-semibold py-3.5 border-b border-gray-100 transition-colors ${
+                active
+                  ? 'text-phyto-bright'
+                  : link.highlight
+                    ? 'text-phyto-forest hover:text-phyto-vibrant'
+                    : 'text-charcoal hover:text-phyto-bright'
+              }`}
             >
-              Get in Touch
+              {link.label}
             </Link>
-          </div>
-        </div>
-      )}
+          );
+        })}
+        <Link
+          href="/contact"
+          onClick={closeMenu}
+          className="mt-4 w-full text-center bg-phyto-forest text-white text-[15px] font-semibold px-7 py-3.5 rounded-full hover:bg-phyto-deep transition-colors"
+        >
+          Get in Touch
+        </Link>
+      </div>
+    </div>
     </>
   );
 }
