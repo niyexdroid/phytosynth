@@ -21,6 +21,28 @@ Next.js 16 marketing site, static export, deployed to Namecheap shared hosting.
   Supports `FTP_REMOTE_DIR` (set to `.` if the FTP account lands inside the web
   root) — currently the account lands at `/` and `public_html` is the web root.
 
+## Rendering gotchas (learned the hard way, June 2026)
+
+- **`trailingSlash: true` is required** in `next.config.js`. The export emits a
+  `route/` directory for each page (segment-data `__next.*.txt` files). Without
+  trailingSlash, the page itself is a flat `route.html` and the `route/` dir has
+  no `index.html`, so Apache's DirectorySlash redirects `/route` → `/route/` and
+  serves a bare directory listing ("Index of /route/"). trailingSlash puts
+  `index.html` inside every route folder so `DirectoryIndex` resolves it.
+- **Content must not depend on JS to become visible.** Sections were marked
+  `reveal opacity-0` (invisible) and only un-hidden by a React `useEffect`
+  IntersectionObserver. If the bundle failed to hydrate, every page rendered
+  styled-but-blank. Fix in `layout.tsx`: a vanilla inline script sets
+  `data-reveal="ready"` and runs the observer independent of React; `globals.css`
+  has a fail-safe (`html:not([data-reveal="ready"]) .reveal { opacity:1 }`) so
+  content is visible by default if JS is disabled/blocked/crashes.
+
+## Local dev gotcha
+
+- On Windows, a running `next dev` locks `out/`, so `next build` fails with
+  `EBUSY: resource busy or locked, rmdir '...\out'`. Stop the dev server before
+  building/deploying.
+
 ## Deploy gotchas (learned the hard way, June 2026)
 
 - **Wrong-account FTP secrets are silent.** `phytosynth.co.uk` resolves to the
