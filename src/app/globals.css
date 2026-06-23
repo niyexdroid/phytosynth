@@ -75,9 +75,11 @@ p.text-center {
    Content blocks are marked `.reveal opacity-0` and are invisible until JS
    un-hides them. If JS is disabled/blocked, or the React bundle fails to
    hydrate, that previously left every section invisible (styled but blank
-   page). The inline script in layout.tsx sets data-reveal="ready" the instant
-   it runs; until/unless that happens we force reveal elements fully visible so
-   content is never lost. */
+   page). The inline script in layout.tsx sets data-reveal="ready" before paint;
+   until/unless that happens we force reveal elements fully visible so content is
+   never lost. The reveal observer itself runs post-hydration in <RevealManager>
+   (so it doesn't mutate server HTML early and trip hydration mismatches), with
+   a timeout failsafe in the inline script for the never-hydrates case. */
 html:not([data-reveal="ready"]) .reveal {
   opacity: 1 !important;
   transform: none !important;
