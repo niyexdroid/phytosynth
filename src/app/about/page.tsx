@@ -191,8 +191,9 @@ export default function AboutPage() {
               Bioscience for a Greener, Smarter Future
             </h1>
             <p className="text-[17px] text-[#B8D8C8] max-w-[680px] mx-auto leading-relaxed">
-              Phytosynth Bioscience Ltd is a science-driven agritech and biotechnology company
-              advancing global food security and environmental sustainability.
+              Phytosynth Bioscience Ltd is a science-driven agritech and
+              biotechnology company advancing global food security and
+              environmental sustainability.
             </p>
           </div>
         </section>
@@ -208,18 +209,21 @@ export default function AboutPage() {
                 Bridging the Lab and the Field
               </h2>
               <p className="text-[16px] text-[#5A6560] leading-relaxed mb-4">
-                Phytosynth Bioscience Ltd is a UK–Africa bioscience innovation and capacity-building
-                organization advancing food security, climate resilience, scientific education, and
-                sustainable agricultural development through biotechnology, artificial intelligence,
-                data science, plant phenotyping, and environmental analytics. Our mission is to
-                bridge research and real-world impact by delivering innovative, science-driven
-                solutions that empower researchers, growers, industry, policymakers, and future
+                Phytosynth Bioscience Ltd is a UK–Africa bioscience innovation
+                and capacity-building organization advancing food security,
+                climate resilience, scientific education, and sustainable
+                agricultural development through biotechnology, artificial
+                intelligence, data science, plant phenotyping, and environmental
+                analytics. Our mission is to bridge research and real-world
+                impact by delivering innovative, science-driven solutions that
+                empower researchers, growers, industry, policymakers, and future
                 scientific leaders across the United Kingdom and Africa.
               </p>
               <p className="text-[16px] text-[#5A6560] leading-relaxed">
-                Our work bridges the gap between scientific discovery and real-world application,
-                helping organizations improve productivity, sustainability and decision-making
-                through evidence-based innovation.
+                Our work bridges the gap between scientific discovery and
+                real-world application, helping organizations improve
+                productivity, sustainability and decision-making through
+                evidence-based innovation.
               </p>
             </div>
             <div className="reveal opacity-0 relative h-[280px] sm:h-[360px] lg:h-[420px] rounded-2xl overflow-hidden shadow-lg">
@@ -240,31 +244,53 @@ export default function AboutPage() {
           <div className="max-w-5xl mx-auto px-6 md:px-8 grid md:grid-cols-2 gap-6 md:gap-7">
             <div className="reveal opacity-0 bg-white border border-gray-200 rounded-2xl p-8 md:p-9">
               <div className="w-12 h-12 mb-5 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.7"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-6 h-6"
+                >
                   <circle cx="12" cy="12" r="10" />
                   <circle cx="12" cy="12" r="6" />
                   <circle cx="12" cy="12" r="2" />
                 </svg>
               </div>
-              <h3 className="text-[20px] font-bold text-[#0D0D0D] mb-3">Our Mission</h3>
+              <h3 className="text-[20px] font-bold text-[#0D0D0D] mb-3">
+                Our Mission
+              </h3>
               <p className="text-[15px] text-[#5A6560] leading-relaxed">
-                To develop innovative biotechnology, artificial intelligence and environmental
-                solutions that enhance agricultural productivity, improve sustainability, support
-                scientific discovery and contribute to global food security.
+                To develop innovative biotechnology, artificial intelligence and
+                environmental solutions that enhance agricultural productivity,
+                improve sustainability, support scientific discovery and
+                contribute to global food security.
               </p>
             </div>
             <div className="reveal opacity-0 bg-white border border-gray-200 rounded-2xl p-8 md:p-9">
               <div className="w-12 h-12 mb-5 flex items-center justify-center rounded-xl bg-phyto-bright/15 text-phyto-bright">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.7"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-6 h-6"
+                >
                   <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z" />
                   <circle cx="12" cy="12" r="3" />
                 </svg>
               </div>
-              <h3 className="text-[20px] font-bold text-[#0D0D0D] mb-3">Our Vision</h3>
+              <h3 className="text-[20px] font-bold text-[#0D0D0D] mb-3">
+                Our Vision
+              </h3>
               <p className="text-[15px] text-[#5A6560] leading-relaxed">
-                To become a globally recognized leader in biotechnology and agricultural innovation,
-                transforming how science, technology and data are used to build sustainable food
-                systems and resilient ecosystems.
+                To become a globally recognized leader in biotechnology and
+                agricultural innovation, transforming how science, technology
+                and data are used to build sustainable food systems and
+                resilient ecosystems.
               </p>
             </div>
           </div>
@@ -281,7 +307,8 @@ export default function AboutPage() {
                 Our Values
               </h2>
               <p className="text-[15px] text-[#6B7570] leading-relaxed">
-                The principles that shape every project, partnership, and recommendation we make.
+                The principles that shape every project, partnership, and
+                recommendation we make.
               </p>
             </div>
 
@@ -291,13 +318,13 @@ export default function AboutPage() {
                   key={value.title}
                   className={`reveal opacity-0 bg-[#F5F7F5] border border-gray-200 rounded-2xl p-7 flex flex-col items-center text-center hover:-translate-y-1 hover:shadow-md hover:border-phyto-pale transition-all duration-300 fade-in-${(i % 3) + 1}`}
                 >
-                  <div className="mb-4 text-phyto-bright">
-                    {value.icon}
-                  </div>
+                  <div className="mb-4 text-phyto-bright">{value.icon}</div>
                   <h3 className="text-[17px] font-bold text-[#0D0D0D] mb-2 leading-tight">
                     {value.title}
                   </h3>
-                  <p className="text-[14px] text-[#6B7570] leading-relaxed">{value.desc}</p>
+                  <p className="text-[14px] text-[#6B7570] leading-relaxed">
+                    {value.desc}
+                  </p>
                 </div>
               ))}
             </div>
@@ -308,7 +335,10 @@ export default function AboutPage() {
         <section className="py-14 md:py-20 bg-phyto-deep">
           <div className="max-w-6xl mx-auto px-6 md:px-8 grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
             {STATS.map((stat) => (
-              <div key={stat.label} className="reveal opacity-0 flex flex-col items-center text-center">
+              <div
+                key={stat.label}
+                className="reveal opacity-0 flex flex-col items-center text-center"
+              >
                 <div className="w-14 h-14 mb-4 flex items-center justify-center text-white">
                   {stat.icon}
                 </div>
@@ -334,16 +364,25 @@ export default function AboutPage() {
                 Seven Connected Areas of Expertise
               </h2>
               <p className="text-[16px] text-[#5A6560] leading-relaxed mb-7">
-                Our services span the full bioscience value chain, from molecular diagnostics and
-                plant biotechnology to AI-driven agriculture, environmental biosolutions, and
-                commercial R&amp;D.
+                Our services span the full bioscience value chain, from
+                molecular diagnostics and plant biotechnology to AI-driven
+                agriculture, environmental biosolutions, and commercial R&amp;D.
               </p>
               <Link
                 href="/services"
                 className="inline-flex items-center gap-2 bg-phyto-forest text-white text-[15px] font-semibold px-7 py-3.5 rounded-full border-2 border-phyto-forest hover:bg-phyto-deep hover:border-phyto-deep hover:-translate-y-px hover:shadow-md transition-all duration-[280ms]"
               >
                 Explore Our Services
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg
+                  width="17"
+                  height="17"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </Link>
@@ -389,48 +428,59 @@ export default function AboutPage() {
                 </div>
                 <h3 className="text-[21px] font-bold text-[#0D0D0D] mt-6 mb-1">
                   Jane Nnamani Akinniyi
-                  <span className="text-[14px] font-semibold text-phyto-bright"> RSci, MRSB</span>
+                  <span className="text-[14px] font-semibold text-phyto-bright">
+                    {" "}
+                    RSci, MRSB
+                  </span>
                 </h3>
                 <p className="text-[14.5px] font-semibold text-phyto-bright">
                   Founder &amp; Chief Executive Officer
                 </p>
-                <p className="text-[13.5px] text-[#6B7570]">Phytosynth Bioscience Ltd</p>
+                <p className="text-[13.5px] text-[#6B7570]">
+                  Phytosynth Bioscience Ltd
+                </p>
               </div>
 
               {/* Bio */}
               <div className="reveal opacity-0">
                 <p className="text-[16px] text-[#5A6560] leading-relaxed mb-4">
-                  Jane Nnamani Akinniyi is a Registered Scientist (RSci) and biotechnology innovator
-                  with over ten years of experience spanning biotechnology, smart agriculture,
-                  molecular biology, plant science, food systems, and research innovation. She founded
-                  Phytosynth Bioscience Ltd to translate scientific research into practical solutions
-                  for food security, climate resilience, environmental sustainability, and
-                  agricultural productivity across the UK and Africa.
+                  Jane Nnamani Akinniyi is a Registered Scientist (RSci) and
+                  biotechnology innovator with over ten years of experience
+                  spanning biotechnology, smart agriculture, molecular biology,
+                  plant science, food systems, and research innovation. She
+                  founded Phytosynth Bioscience Ltd to translate scientific
+                  research into practical solutions for food security, climate
+                  resilience, environmental sustainability, and agricultural
+                  productivity across the UK and Africa.
                 </p>
                 <p className="text-[16px] text-[#5A6560] leading-relaxed mb-4">
-                  Jane holds an MSc in Biotechnology with Distinction from Nottingham Trent University
-             , where she was awarded the NTU International Scholarship, an MSc in Biochemistry
-                  from the University of Lagos, and a BSc in Biochemistry from Obafemi Awolowo
-                  University, graduating as the best student in her department. Her career spans
-                  academia, government research institutions, and industry-led innovation, with
-                  technical leadership across hydroponics, aeroponics, plant phenotyping, greenhouse
-                  automation, environmental sensing, metabolomics, and AI-driven data analytics.
+                  Jane holds an MSc in Biotechnology with Distinction from
+                  Nottingham Trent University , where she was awarded the NTU
+                  International Scholarship, an MSc in Biochemistry from the
+                  University of Lagos, and a BSc in Biochemistry from Obafemi
+                  Awolowo University. Her career spans academia, government
+                  research institutions, and industry-led innovation, with
+                  technical leadership across hydroponics, aeroponics, plant
+                  phenotyping, greenhouse automation, environmental sensing,
+                  metabolomics, and AI-driven data analytics.
                 </p>
                 <p className="text-[16px] text-[#5A6560] leading-relaxed mb-4">
-                  Her expertise covers plant biotechnology, crop phenotyping, molecular diagnostics,
-                  metabolomics, food safety, postharvest technology, and machine learning in
-                  agriculture, including work with PlantEye F600 3D phenotyping and LI-COR gas
-                  exchange systems. An active scientific author and peer reviewer for international
-                  journals published by Elsevier and Springer Nature, her publications cover green
-                  nanotechnology, food waste valorisation, postharvest biotechnology, and sustainable
-                  agriculture.
+                  Her expertise covers plant biotechnology, crop phenotyping,
+                  molecular diagnostics, metabolomics, food safety, postharvest
+                  technology, and machine learning in agriculture. An active
+                  scientific author and peer reviewer for international journals
+                  published by Elsevier and Springer Nature, her publications
+                  cover green nanotechnology, food waste valorisation,
+                  postharvest biotechnology, and sustainable agriculture.
                 </p>
                 <p className="text-[16px] text-[#5A6560] leading-relaxed">
-                  As CEO, Jane leads Phytosynth&apos;s vision of integrating biotechnology, artificial
-                  intelligence, environmental analytics, and sustainable agriculture into solutions
-                  for researchers, growers, industry, and policymakers. She is especially passionate
-                  about strengthening UK–Africa scientific collaboration, supporting early-career
-                  researchers, and promoting women in science.
+                  As CEO, Jane leads Phytosynth&apos;s vision of integrating
+                  biotechnology, artificial intelligence, environmental
+                  analytics, and sustainable agriculture into solutions for
+                  researchers, growers, industry, and policymakers. She is
+                  especially passionate about strengthening UK–Africa scientific
+                  collaboration, supporting early-career researchers, and
+                  promoting women in science.
                 </p>
               </div>
             </div>
@@ -447,8 +497,8 @@ export default function AboutPage() {
               Let&apos;s Build a Greener, Smarter Future Together
             </h2>
             <p className="text-[17px] text-[#B8D8C8] max-w-[560px] mx-auto leading-relaxed mb-8">
-              Contact Phytosynth Bioscience Ltd to discuss consultancy, training, research
-              collaboration, or bespoke scientific solutions.
+              Contact Phytosynth Bioscience Ltd to discuss consultancy,
+              training, research collaboration, or bespoke scientific solutions.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
@@ -461,7 +511,16 @@ export default function AboutPage() {
                 href="/research"
                 className="inline-flex items-center gap-2 text-white text-[15px] font-semibold hover:text-phyto-bright transition-colors"
               >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
                 Our Research
